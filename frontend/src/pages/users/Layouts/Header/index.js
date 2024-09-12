@@ -1,24 +1,36 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, NavDropdown, Button, Offcanvas, Form, FormControl } from 'react-bootstrap';
 import image from '../../../../assets/logo.jpg';
-import './header.css'; // Custom styles
+import './header.css'; 
 
 const Header = () => {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const handleClose = () => setShowOffcanvas(false);
     const handleShow = () => setShowOffcanvas(true);
+
+    useEffect(() => {
+        const handleResize = () => setWindowWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    useEffect(() => {
+        if (windowWidth >= 992) { 
+            setShowOffcanvas(false);
+        }
+    }, [windowWidth]);
 
     return (
         <header className="header">
             <Container>
                 <Navbar bg="dark" variant="dark" expand="lg">
-                    {/* Logo Section */}
+                    {/* LOGO */}
                     <Navbar.Brand href="#">
                         <img src={image} alt="Logo" className="img-fluid" />
                     </Navbar.Brand>
 
-                    {/* Toggler Button for small screens */}
+                    {/* Button small screen */}
                     <Navbar.Toggle aria-controls="navbar-nav" onClick={handleShow} />
 
                     {/* Navbar Menu for large screens */}

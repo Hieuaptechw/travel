@@ -87,5 +87,9 @@ a.nav-link:focus {
 }
 
 .d-lg-none.offcanvas-custom.offcanvas.offcanvas-end.show {
-    background: black;
+    background: black !important;
+}
+
+.offcanvas-custom .offcanvas-header .btn-close {
+    filter: invert(1); 
 }
