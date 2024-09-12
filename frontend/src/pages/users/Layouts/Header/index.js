@@ -19,8 +19,8 @@ const Header = () => {
                     <Col xs={5} >
                         <Navbar expand="lg" bg="dark" variant="dark" className="w-100 jusitfy-content-center">
                             <Navbar.Toggle aria-controls="navbar-nav" />
-                            <Navbar.Collapse id="navbar-nav">
-                                <Nav className="me-auto">
+                            <Navbar.Collapse id="navbar-nav" className='justify-content-center'>
+                                <Nav>
                                     <Nav.Link href="#">Home</Nav.Link>
                                     <NavDropdown title="Catalog" id="catalog-dropdown">
                                         <NavDropdown.Item href="#">Catalog Grid</NavDropdown.Item>
