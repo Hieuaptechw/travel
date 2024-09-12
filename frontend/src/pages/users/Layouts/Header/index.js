@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, NavDropdown, Button, Offcanvas, Form, FormControl } from 'react-bootstrap';
-import image from '../../../../assets/logo.jpg';
+import image from '../../../../assets/logo.png';
 import './header.css'; 
 
 const Header = () => {
@@ -27,7 +27,7 @@ const Header = () => {
                 <Navbar bg="dark" variant="dark" expand="lg">
                     {/* LOGO */}
                     <Navbar.Brand href="#">
-                        <img src={image} alt="Logo" className="img-fluid" />
+                        <img src={image} alt="Logo" className="logo" />
                     </Navbar.Brand>
 
                     {/* Button small screen */}
