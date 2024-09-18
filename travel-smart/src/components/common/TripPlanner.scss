@@ -1,0 +1,14 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.-trip-planner {
+    gap: 0.5em;
+}
+
+@include media-breakpoint-up(lg) {
+    .-trip-planner {
+        gap: 1em;
+    }
+}
