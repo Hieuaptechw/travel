@@ -128,3 +128,43 @@
 .top-comment{
     background-color: #e5f0fd;
 }
+
+.person {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+.person-container {
+    padding: 10px 0;
+}
+
+.person-name {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.mr-3 {
+    margin-right: 15px;
+}
+.mr-4{
+    margin-right: 60px;
+}
+.comment{
+    padding: 100px;
+}
+.nav-tabs .nav-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+
+.text-muted {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.tab-content {
+    margin-top: 20px;
+}

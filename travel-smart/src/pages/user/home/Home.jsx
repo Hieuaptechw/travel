@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button,Tab,Nav } from 'react-bootstrap';
 import NewYorkImage from '../../../assets/images/NewYork.jpg';
 import London from '../../../assets/images/London.png';
 import Barcelona from '../../../assets/images/Barcelona.jpg';
@@ -10,7 +10,7 @@ import icon1 from '../../../assets/images/1.svg';
 import icon2 from '../../../assets/images/2.svg';
 import icon3 from '../../../assets/images/3.svg';
 import './Home.css';
-
+import ReactStars from 'react-stars'
 const Home = () => {
     const cardData = [
         { id: 1, title: 'New York', text: '14 Hotel - 22 Cars - 18 Tours - 95 Activity', img: NewYorkImage },
@@ -38,7 +38,6 @@ const Home = () => {
         <>
             <section>
                 <Container>
-
                     {/* Popular */}
                     <Row className='my-5'>
                         <Col>
@@ -199,30 +198,181 @@ const Home = () => {
 
                 </Container>
             </section>
-            <section className='top-comment'>
+            <section className='top-comment my-5'>
                 {/* Top comment */}
-                <Container>
+                <Container className='comment'>
                     <Row>
                         <Col>
                             <h2>What our customers are saying us?</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh, sit amet tempor nibh finibus et. Aenean eu enim justo.</p>
                             <Row>
-                                <Col>
-                                    <div>
-                                        <h1>13m+</h1>
+                                <Col className='d-flex justify-content-start align-items-center my-3'>
+                                    <div className='col-5'>
+                                        <h1 className='mr-4'>13m+</h1>
                                         <p>Happy People</p>
                                     </div>
                                     <div>
                                         <h1>4.88</h1>
                                         <p>Overall rating</p>
-                                        
+                                        <ReactStars
+                                            count={5}
+                                            value={5}
+                                            size={24}
+                                            color2={'#ffd700'}
+                                            edit={false}
+                                        />
                                     </div>
                                 </Col>
                             </Row>
                         </Col>
+                        <Col>
+                            <div className="d-flex align-items-center person-container">
+                                <img src={NewYorkImage} alt="Annette Black" className="person mr-3" />
+                                <p className="mb-0 person-name">Annette Black</p>
+                            </div>
+                            <div>
+                                <h6>
+                                    The place is in a great location in Gumbet. The area is safe and
+                                    beautiful. The apartment was comfortable and the host was kind and
+                                    responsive to our requests. Really a nice place.
+                                </h6>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
+            </section>
+            <section>
+                <Container>
+                    <Row>
+                        <Col>
+                            <h1>Get inspiration for your next trip</h1>
+                            <p>Interdum et malesuada fames</p>
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col xs={12} md={4}>
+                            <img src={NewYorkImage} alt="New York" className="img-fluid" />
+                            <h3>10 European ski destinations you should visit this winter</h3>
+                            <p>Jan 06, 2023</p>
+                        </Col>
+                        <Col xs={12} md={4}>
+                            <img src={NewYorkImage} alt="New York" className="img-fluid" />
+                            <h3>10 European ski destinations you should visit this winter</h3>
+                            <p>Jan 06, 2023</p>
+                        </Col>
+                        <Col xs={12} md={4}>
+                            <img src={NewYorkImage} alt="New York" className="img-fluid" />
+                            <h3>10 European ski destinations you should visit this winter</h3>
+                            <p>Jan 06, 2023</p>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+            <section>
+                <Container>
+                    <Tab.Container id="left-tabs-example" defaultActiveKey="all">
+                        <Nav variant="tabs" className="justify-content-start my-3">
+                            <Nav.Item>
+                                <Nav.Link eventKey="all">All</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="europe">Europe</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="asia">Asia</Nav.Link>
+                            </Nav.Item>
+                            <Nav.Item>
+                                <Nav.Link eventKey="northAmerica">North America</Nav.Link>
+                            </Nav.Item>
+                        </Nav>
 
+                        <Tab.Content>
+                            <Tab.Pane eventKey="all">
+                                <Row>
+                                    <Col md={3}>
+                                        <h3>Hawaii</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <h3>Istanbul</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <h3>San Diego</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <h3>Reykjavik</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+
+                            <Tab.Pane eventKey="europe">
+                                <Row>
+                                    <Col md={3}>
+                                        <h3>Paris</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <h3>London</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <h3>Amsterdam</h3>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Prague</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+
+                            <Tab.Pane eventKey="asia">
+                                <Row>
+                                    <Col md={3}>
+                                        <p>Phuket</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Bangkok</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Tokyo</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Seoul</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+
+                            <Tab.Pane eventKey="northAmerica">
+                                <Row>
+                                    <Col md={3}>
+                                        <p>Los Angeles</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Boston</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>San Francisco</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                    <Col md={3}>
+                                        <p>Miami</p>
+                                        <p className="text-muted">12,683 properties</p>
+                                    </Col>
+                                </Row>
+                            </Tab.Pane>
+                        </Tab.Content>
+                    </Tab.Container>
+                </Container>
             </section>
         </>
     );
