@@ -1,0 +1,47 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+.-trip-planner {
+    gap: 0.5em;
+
+    &-popover {
+        --bs-popover-max-width: calc(100vw - 20px) !important;
+        transition: opacity 0.2s !important;
+        > .popover-arrow {
+            border: none;
+            &::before {
+                display: none !important;
+            }
+        }
+        > :last-child {
+            transition: transform 0.2s cubic-bezier(0.11, 0, 0.5, 0);
+            transform-origin: top;
+            transform: scale(0.5);
+        }
+    }
+    &-popover.show > :last-child {
+        transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        transform: scale(1);
+    }
+
+    &-who-picker {
+        min-width: min(400px, calc(100vw - 40px));
+        width: calc(100% - 2px);
+    }
+
+    & > hr {
+        margin: 0;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .-trip-planner {
+        gap: 1em;
+        & > hr {
+            border-top: none;
+            border-left: var(--bs-border-width) solid;
+        }
+    }
+}

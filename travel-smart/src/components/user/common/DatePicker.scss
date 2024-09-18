@@ -1,0 +1,53 @@
+.-date-picker 
+{
+    &-nav {
+        .btn {
+            padding: 0;
+            width: 40px;
+            font-size: 1.25em;
+            aspect-ratio: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-calendar {
+        width: 100%;
+        min-width: 350px;
+        aspect-ratio: 7 / 6.5;
+        position: relative;
+
+        > div {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            display: grid;
+            gap: 0.5em;
+            opacity: 0;
+            user-select: none;
+            pointer-events: none;
+            transform: scale(0.8);
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        > div.active {
+            opacity: 1;
+            user-select: unset;
+            pointer-events: unset;
+            transform: scale(1);
+        }
+        > div.active ~ div {
+            transform: scale(1.2);
+        }
+
+        .btn {
+            padding: 0;
+            --bs-btn-hover-color: var(--bs-primary);
+            --bs-btn-active-color: var(--bs-primary);
+            --bs-btn-active-border-color: var(--bs-primary);
+        }
+    }
+    &-day-calendar {
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: 1fr repeat(6, 2fr);
+    }
+}
