@@ -3,12 +3,17 @@ import { Routes, Route } from "react-router-dom";
 import { ROUTERS } from "./utils/router";
 import MasterLayout from "./pages/user/layout/masterlayout/MasterLayout";
 import Home from "./pages/user/home/Home";
+import HotelPage from "./pages/user/hotel/HotelPage";
 
 
 const routes = [
   {
     path: ROUTERS.USER.HOME,
-    component:<Home/>,
+    component: <Home/>,
+  },
+  {
+    path: ROUTERS.USER.HOTELS,
+    component: <HotelPage/>,
   },
 ];
 
