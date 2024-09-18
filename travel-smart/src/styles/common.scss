@@ -1,3 +1,13 @@
+.d-flex-center {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
 .flex-equal {
     flex: 0 1 100%;
+}
+
+.square {
+    aspect-ratio: 1;
 }

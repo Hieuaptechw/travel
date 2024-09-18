@@ -1,5 +1,7 @@
 .-date-picker 
 {
+    overflow: hidden;
+
     &-nav {
         .btn {
             padding: 0;
@@ -12,9 +14,9 @@
         }
     }
     &-calendar {
-        width: 100%;
-        min-width: 350px;
-        aspect-ratio: 7 / 6.5;
+        width: 340px;
+        max-width: 100%;
+        aspect-ratio: 7 / 6.65;
         position: relative;
 
         > div {

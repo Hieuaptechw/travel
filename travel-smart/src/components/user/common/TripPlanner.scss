@@ -27,8 +27,8 @@
     }
 
     &-who-picker {
-        min-width: min(400px, calc(100vw - 40px));
-        width: calc(100% - 2px);
+        max-width: 100%;
+        width: 400px;
     }
 
     & > hr {

@@ -37,13 +37,13 @@ const DatePicker = ({value, onChange}) => {
                     <button class="btn" onClick={() => addMonths(1)}><Icon icon="ic:outline-keyboard-arrow-right" /></button>
                 </div>}
                 <div class="flex-equal d-flex align-items-center">
-                    <button class="btn" onClick={() => addYears(-1)}><Icon icon="ic:outline-keyboard-double-arrow-left" /></button>
+                    <button class="btn" onClick={() => addYears(-1)}><Icon icon="ic:outline-keyboard-arrow-left" /></button>
                     <span class="flex-fill text-center" role="button" onClick={() => { 
                         dateWindow.setFullYear(Math.floor(dateWindow.getFullYear() / 12) * 12); setDateWindow(dateWindow); setRange("year"); 
                     }}>
                         {dateWindow.getFullYear() + (range == "year" ? "-" + (dateWindow.getFullYear() + 11) : "")}
                     </span>
-                    <button class="btn" onClick={() => addYears(1)}><Icon icon="ic:outline-keyboard-double-arrow-right" /></button>
+                    <button class="btn" onClick={() => addYears(1)}><Icon icon="ic:outline-keyboard-arrow-right" /></button>
                 </div>
             </h6>
             <div class="-date-picker-calendar"> 
