@@ -6,6 +6,8 @@ import Home from "./pages/user/home/Home";
 import About from "./pages/user/about/About";
 import LoginPage from "./pages/user/login";
 import SignUpPage from "./pages/user/Signup";
+import DestinationPage from "./pages/user/destinations";
+import BlogPage from "./pages/user/blogs";
 
 
 const routes = [
@@ -24,6 +26,14 @@ const routes = [
   {
     path: ROUTERS.USER.SIGNUP,
     component: <SignUpPage />,
+  },
+  {
+    path: ROUTERS.USER.DESTINATION,
+    component: <DestinationPage />,
+  },
+  {
+    path: ROUTERS.USER.BLOG,
+    component: <BlogPage />,
   },
 
 ];
