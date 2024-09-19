@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button,Tab,Nav } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Tab, Nav } from 'react-bootstrap';
 import NewYorkImage from '../../../assets/images/NewYork.jpg';
 import London from '../../../assets/images/London.png';
 import Barcelona from '../../../assets/images/Barcelona.jpg';
@@ -9,7 +9,8 @@ import Paris from '../../../assets/images/Paris.jpg';
 import icon1 from '../../../assets/images/1.svg';
 import icon2 from '../../../assets/images/2.svg';
 import icon3 from '../../../assets/images/3.svg';
-import './Home.css';
+import bg from '../../../assets/images/bg.jpg';
+import './Home.scss';
 import ReactStars from 'react-stars'
 const Home = () => {
     const cardData = [
@@ -36,6 +37,14 @@ const Home = () => {
     };
     return (
         <>
+            <section class="hero-section">
+                <img src={bg} alt="Background Image" class="hero-image" />
+                <div class="hero-text">
+                    <h1>Find Next Place To Visit</h1>
+                    <p>Discover amazing places at exclusive deals</p>
+                </div>
+            </section>
+
             <section>
                 <Container>
                     {/* Popular */}
@@ -332,19 +341,19 @@ const Home = () => {
                             <Tab.Pane eventKey="asia">
                                 <Row>
                                     <Col md={3}>
-                                        <p>Phuket</p>
+                                        <h3>Phuket</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>Bangkok</p>
+                                        <h3>Bangkok</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>Tokyo</p>
+                                        <h3>Tokyo</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>Seoul</p>
+                                        <h3>Seoul</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                 </Row>
@@ -353,19 +362,19 @@ const Home = () => {
                             <Tab.Pane eventKey="northAmerica">
                                 <Row>
                                     <Col md={3}>
-                                        <p>Los Angeles</p>
+                                        <h3>Los Angeles</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>Boston</p>
+                                        <h3>Boston</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>San Francisco</p>
+                                        <h3>San Francisco</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                     <Col md={3}>
-                                        <p>Miami</p>
+                                        <h3>Miami</h3>
                                         <p className="text-muted">12,683 properties</p>
                                     </Col>
                                 </Row>
