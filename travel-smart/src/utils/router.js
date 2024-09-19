@@ -7,6 +7,7 @@ export const ROUTERS = {
         SIGNUP: "/signup",
         DESTINATION: "/destination",
         BLOG: "/blogs",
+        HOTELS:"/hotels",
         TOURS:"/tours",
         CARS:"/cars",
         ABOUT: "/about",
