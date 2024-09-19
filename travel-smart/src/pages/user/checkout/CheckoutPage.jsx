@@ -4,6 +4,8 @@ import NumberInput from '../../../components/user/common/NumberInput';
 import TripPlan from '../../../components/user/plan/TripPlan';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import TripSummary from '../../../components/user/plan/TripSummary';
+import CheckoutUserForm from '../../../components/user/checkout/CheckoutUserForm';
+import CheckoutPaymentForm from '../../../components/user/checkout/CheckoutPaymentForm';
 
 const CheckoutPage = () => {
 
@@ -39,6 +41,17 @@ const CheckoutPage = () => {
                             </button>
                             Let us know more about you
                         </h1>
+                        <CheckoutUserForm />
+                    </div>
+                }{
+                    step === 2 && <div className="col-12 col-md-9 col-lg-7 col-xl-6 col-xxl-5">
+                        <h1>
+                            <button class="btn align-baseline p-0 me-2" onClick={handleBack}>
+                                <Icon icon="ic:outline-keyboard-arrow-left" class="fs-1" inline/>
+                            </button>
+                            How would you like to pay?
+                        </h1>
+                        <CheckoutPaymentForm />
                     </div>
                 }
                 <div className="col-12 col-md-9 col-lg-4 ms-0 ms-lg-5 py-2 d-flex flex-column">
