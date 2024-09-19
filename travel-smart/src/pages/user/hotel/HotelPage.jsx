@@ -39,7 +39,7 @@ const HotelPage = () => {
                     "-hotel-page-aside col col-lg-3 flex-shrink-1 me-lg-4 mb-4"
                     + (filtersShown ? " show" : "")
                 }>
-                    <button className='btn d-flex-center d-lg-none p-2 mb-4'
+                    <button className='btn d-flex align-items-center d-lg-none p-2 mb-4'
                         onClick={() => setFilterShown(false)}
                     >
                         <Icon icon="flowbite:close-outline" class="fs-3" />
