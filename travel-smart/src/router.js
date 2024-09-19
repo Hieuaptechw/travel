@@ -5,6 +5,8 @@ import MasterLayout from "./pages/user/layout/masterlayout/MasterLayout";
 import Home from "./pages/user/home/Home";
 import About from "./pages/user/about/About";
 import LoginPage from "./pages/user/login";
+import SignUpPage from "./pages/user/Signup";
+
 
 const routes = [
   {
@@ -19,6 +21,11 @@ const routes = [
     path: ROUTERS.USER.LOGIN,
     component: <LoginPage />,
   },
+  {
+    path: ROUTERS.USER.SIGNUP,
+    component: <SignUpPage />,
+  },
+
 ];
 
 const RouterCustom = () => {

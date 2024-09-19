@@ -7,7 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaFacebookF, FaGoogle } from 'react-icons/fa'; // Import icons
 
-const LoginPage = () => {
+const SignUpPage = () => {
     return (
         <section id="login">
             <Container fluid="lg">
@@ -69,4 +69,4 @@ const LoginPage = () => {
     );
 };
 
-export default LoginPage;
+export default SignUpPage;
