@@ -2,6 +2,7 @@ export const ROUTERS = {
 
     USER: {
         HOME: "/",
-        ABOUT: "/about"
+        ABOUT: "/about",
+        LOGIN: "/login"
     },
 }
