@@ -7,6 +7,7 @@ import HotelPage from "./pages/user/hotel/HotelPage";
 import About from "./pages/user/about/About";
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
+import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 
 const routes = [
   {
@@ -28,6 +29,10 @@ const routes = [
   {
     path: ROUTERS.USER.ABOUT,
     component: <About />,
+  },
+  {
+    path: ROUTERS.USER.CHECKOUT,
+    component: <CheckoutPage />,
   },
 ];
 
