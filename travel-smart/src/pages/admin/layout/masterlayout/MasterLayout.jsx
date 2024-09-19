@@ -9,9 +9,9 @@ const MasterLayoutAdmin = ({ children, ...props }) => {
     <>
       <Header />
       <section {...props} className="">
-        <div className="row">
+        <div className="d-md-flex">
           <Sidebar />
-          <div className="col-md-10 offset-md-2 no-offset-on-small content">
+          <div className="flex-fill content">
             {children}
           </div>
         </div>
