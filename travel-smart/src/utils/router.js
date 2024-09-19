@@ -8,6 +8,7 @@ export const ROUTERS = {
         DESTINATION: "/destination",
         BLOG: "/blogs",
         HOTELS:"/hotels",
+        HOTELSINGLE:"/hotels/1",
         TOURS:"/tours",
         CARS:"/cars",
         ABOUT: "/about",

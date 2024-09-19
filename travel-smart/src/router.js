@@ -18,6 +18,7 @@ import DestinationPage from "./pages/user/destinations";
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
+import HotelSingPage from './pages/user/hotel/HotelSinglePage';
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
   {
     path: ROUTERS.USER.HOTELS,
     component: <HotelPage/>,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.HOTELSINGLE,
+    component: <HotelSingPage/>,
     layout: MasterLayout,
   },
   {
