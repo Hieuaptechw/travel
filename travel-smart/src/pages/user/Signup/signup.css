@@ -1,6 +1,6 @@
 #login {
     padding: 60px 0;
-    background-color: #f8f9fa; /* Adjust based on your design */
+    background-color: #e5f0fd /* Adjust based on your design */
 }
 
 .login-form {
@@ -69,18 +69,19 @@
 .sub {
     text-align: center;
     padding-top: 20px; /* Adjust padding */
+    
 }
 
 .sub-1 {
     text-align: center;
     padding-top: 10px; /* Adjust padding */
-    font-weight: 500;
-    font-size: 18px;
+    color: #697488;
+    font-size: 16px;
 }
 
 .sub span {
     font-weight: 600;
-    font-size: 14px; /* Adjust font size */
+    font-size: 16px; /* Adjust font size */
     color: #697488; /* Adjust color */
 }
 
