@@ -1,11 +1,11 @@
 import React from 'react';
-import './blogs.css';
-const BlogPage = () => {
+
+const index = () => {
     return (
         <div>
-            aaa
+            
         </div>
     );
 };
 
-export default BlogPage;
+export default index;
