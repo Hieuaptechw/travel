@@ -4,6 +4,7 @@ import TripPlanner from '../../../components/user/common/TripPlanner';
 import TourFilters from '../../../components/user/tour/TourFilters';
 import TourList from '../../../components/user/tour/TourList';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
+import PageControl from '../../../components/user/common/PageControl';
 
 const data = [...new Array(10)].map(x => (
     {
@@ -61,6 +62,7 @@ const TourPage = () => {
                         </span>
                     </div>
                     <TourList data={data} />
+                    <PageControl />
                 </div>
             </div>
         </div>

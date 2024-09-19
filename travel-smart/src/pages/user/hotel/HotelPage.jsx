@@ -4,6 +4,7 @@ import TripPlanner from '../../../components/user/common/TripPlanner';
 import HotelFilters from '../../../components/user/hotel/HotelFilters';
 import HotelList from '../../../components/user/hotel/HotelList';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
+import PageControl from '../../../components/user/common/PageControl';
 
 const data = [...new Array(10)].map(x => (
     {
@@ -64,6 +65,7 @@ const HotelPage = () => {
                         </span>
                     </div>
                     <HotelList data={data} />
+                    <PageControl />
                 </div>
             </div>
         </div>

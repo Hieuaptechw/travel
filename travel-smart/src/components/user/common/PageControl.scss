@@ -1,0 +1,25 @@
+.-page-control {
+    ul {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+    }
+    .btn {
+        height: 3em;
+        min-width: 3em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 99999vw;
+
+        --bs-btn-border-color: var(--bs-primary);
+        --bs-btn-hover-border-color: var(--bs-primary);
+    }
+    .active .btn {
+        background: var(--bs-primary);
+        --bs-btn-active-bg: var(--bs-primary);
+        color: var(--bs-light);
+        --bs-btn-active-color: var(--bs-light);
+        --bs-btn-active-border-color: var(--bs-dark);
+    }
+}
