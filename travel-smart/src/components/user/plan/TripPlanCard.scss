@@ -1,0 +1,27 @@
+.-trip-plan-card {
+    padding: 0.5em 0.5em 0.5em 5em;
+    min-height: 5em;
+    margin-block: 1em;
+    position: relative;
+
+    &-circle {
+        position: absolute;
+        z-index: 10;
+        border-radius: 50px;
+        width: 3em; height: 3em;
+        top: 1em; left: 1em;
+        border: .25em solid var(--bs-primary);
+        box-shadow: var(--bs-box-shadow);
+        background: var(--bs-body-bg);
+    }
+
+    &:not(:first-child)::before {
+        content: "";
+        background: var(--bs-primary);
+        position: absolute;
+        inset: -0.5em auto auto 2.25em;
+        width: .5em;
+        height: 2.5em;
+        z-index: 1;
+    }
+}
