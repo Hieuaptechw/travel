@@ -1,0 +1,190 @@
+
+$primary-color: #3554d1;
+$secondary-color: #f5f6fd;
+$button-hover-bg: #3554d1;
+$button-text-color: #fff;
+$popular-img-height: 300px;
+$overlay-bg: rgba(0, 0, 0, 0.4);
+$hotel-card-shadow: rgba(0, 0, 0, 0.1);
+$rating-bg-color: #28a745;
+$text-muted-color: #888;
+$text-primary-color: #007bff;
+$box-shadow-hover: translateY(-5px);
+.view-all {
+    width: 50%;
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: none;
+    height: 50px;
+    font-weight: 500;
+
+    &:hover {
+        color: $button-text-color;
+        background-color: $button-hover-bg;
+    }
+}
+
+.popular-img {
+    width: 100%;
+    height: $popular-img-height;
+}
+.custom-card {
+    background-image: url('../../../assets/images/Barcelona.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $overlay-bg;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+
+        h2,
+        h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .btn-overlay {
+            background-color: $button-text-color;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+}
+
+// Select styles
+.select {
+    width: 22%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+// Hotel cards
+.hotel-card {
+    box-shadow: 0 4px 8px $hotel-card-shadow;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+
+    &:hover {
+        transform: $box-shadow-hover;
+    }
+
+    .hotel-title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 0.5rem;
+    }
+
+    .hotel-location {
+        color: $text-muted-color;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .rating-btn {
+        background-color: $rating-bg-color;
+        border: none;
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    .rating-text {
+        font-weight: bold;
+        color: #333;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .reviews-text {
+        font-size: 0.85rem;
+        color: $text-muted-color;
+    }
+
+    .price-text {
+        font-size: 1.1rem;
+        color: #333;
+        margin-top: 10px;
+
+        strong {
+            color: $text-primary-color;
+        }
+    }
+}
+
+// Top comment section
+.top-comment {
+    background-color: #e5f0fd;
+
+    .person {
+        border-radius: 50%;
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+    }
+
+    .person-container {
+        padding: 10px 0;
+    }
+
+    .person-name {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .mr-3 {
+        margin-right: 15px;
+    }
+
+    .mr-4 {
+        margin-right: 60px;
+    }
+
+    .comment {
+        padding: 100px 0;
+    }
+}
+
+// Tabs styles
+.nav-tabs .nav-link {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    color: $text-muted-color;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
