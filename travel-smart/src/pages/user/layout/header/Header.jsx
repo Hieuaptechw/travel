@@ -25,6 +25,11 @@ const Header = () => {
     }, [windowWidth]);
 
     return (
+<<<<<<< HEAD
+        <div className='header'>
+            hddeader
+        </div>
+=======
         <header className="header">
             <Container fluid>
                 <Navbar bg="dark" variant="dark" expand="lg">
@@ -95,6 +100,7 @@ const Header = () => {
                 </Navbar>
             </Container>
         </header>
+>>>>>>> 777e91374f0ea4311d75cfb26dbc1facc87fafce
     );
 };
 
