@@ -1,0 +1,14 @@
+.view-all{
+    border: none;
+    height: 50px;
+    width: 40%;
+    background-color: #3554d10d;
+    color: #3554d1;
+    font-weight: 500;
+    font-size: 15px;
+}
+.view-all:hover{
+    cursor: pointer;
+    background-color: #3554d1;
+    color: #fff;
+}

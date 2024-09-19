@@ -6,6 +6,16 @@ export const ROUTERS = {
         LOGIN: "/login",
         SIGNUP: "/signup",
         DESTINATION: "/destination",
-        BLOG: "/blogs"
+        BLOG: "/blogs",
     },
+    ADMIN:{
+        HOME:"/",
+        HOTELS:"/hotels",
+        TOURS:"/tours",
+        CARS:"/cars",
+        ABOUT: "/about",
+
+        
+    }
+
 }
