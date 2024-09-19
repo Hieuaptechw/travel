@@ -29,7 +29,6 @@ const configs = {
 const HotelFilters = () => {
 
     let [priceRange, setPriceRange] = useState([0, 510]);
-
     const handleSetPriceRange = (range) => {
         setPriceRange([Math.min(range[0], 500), range[1]]);
     }

@@ -8,7 +8,7 @@ const HotelListCard = ({ data }) => {
             <div class="-hotel-card-image col-md-3">
                 <img src={data.image} class="rounded-2 w-100" alt="image" />
             </div>
-            <div class="-hotel-card-info d-md-flex ms-md-3">
+            <div class="-hotel-card-info flex-fill d-md-flex ms-md-3">
                 <div class="flex-fill mt-2 mt-md-0">
                     <div>
                         <h5 className="m-0">{data.hotelName}</h5>

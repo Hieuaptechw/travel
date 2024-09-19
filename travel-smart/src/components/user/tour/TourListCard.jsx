@@ -8,7 +8,7 @@ const TourListCard = ({ data }) => {
             <div class="-tour-card-image col-md-3">
                 <img src={data.image} class="rounded-2 w-100" alt="image" />
             </div>
-            <div class="-tour-card-info d-md-flex ms-md-3">
+            <div class="-tour-card-info flex-fill d-md-flex ms-md-3">
                 <div class="flex-fill mt-2 mt-md-0">
                     <div>
                         <p className="opacity-75 m-0"><small>

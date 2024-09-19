@@ -6,6 +6,7 @@ import Home from "./pages/user/home/Home";
 import HotelPage from "./pages/user/hotel/HotelPage";
 import About from "./pages/user/about/About";
 import TourPage from "./pages/user/tour/TourPage";
+import CarPage from "./pages/user/car/CarPage";
 
 const routes = [
   {
@@ -19,6 +20,10 @@ const routes = [
   {
     path: ROUTERS.USER.TOURS,
     component: <TourPage />,
+  },
+  {
+    path: ROUTERS.USER.CARS,
+    component: <CarPage />,
   },
   {
     path: ROUTERS.USER.ABOUT,

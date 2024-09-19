@@ -1,38 +1,40 @@
 import React, { useState } from 'react';
 import '../FilterAside.scss';
 import TripPlanner from '../../../components/user/common/TripPlanner';
-import HotelFilters from '../../../components/user/hotel/HotelFilters';
-import HotelList from '../../../components/user/hotel/HotelList';
+import TourFilters from '../../../components/user/tour/TourFilters';
+import TourList from '../../../components/user/tour/TourList';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import PageControl from '../../../components/user/common/PageControl';
+import CarFilters from '../../../components/user/car/CarFilters';
+import CarList from '../../../components/user/car/CarList';
 
 const data = [...new Array(10)].map(x => (
     {
-        image: "https://placehold.co/400x300",
-        hotelName: "Great Northern Hotel, a Tribute Portfolio Hotel, London",
-        hotelLocation: "Westminster Borough, London",
-        hotelDistance: [2, "km", "city center"],
-        roomName: "King Room",
-        roomFeature: "1 extra-large double bed",
-        deal: ["Free cancellation", "You can cancel later, so lock in this great price today."],
-        amenities: ["WiFi", "Breakfast", "Spa", "Bar"],
+        image: "https://placehold.co/400x400",
+        supplier: "Noi Bai Airport",
+        type: "SUV",
+        model: "Mercedes-Benz E-Class",
+        seats: 4,
+        luggage: 2,
+        coverage: "Unlimited",
+        transmission: "Automatic",
+        specifications: ["Air conditioning", "No shaking"],
+        waranty: "Free admenments",
+        deal: "Free cancellation",
         rating: 9.6,
         ratingCount: 1024,
-        duration: 8,
-        capacity: [2, 1],
-        nightPrice: [72, "USD"],
-        extraPrice: [72, "USD"],
+        pricePerDistance: [0.72, "USD", "km"],
     }
 ));
 
-const HotelPage = () => {
+const CarPage = () => {
 
     const [filtersShown, setFilterShown] = useState(false);
 
     return (
         <div class="container">
             <div class="my-5">
-                <h1 class="text-center fs-2 mb-3">Find Your Dream Luxury Hotel</h1>
+                <h1 class="text-center fs-2 mb-3">Cars for rent</h1>
                 <TripPlanner />
             </div>
             <div class="row-lg d-lg-flex">
@@ -45,11 +47,11 @@ const HotelPage = () => {
                     >
                         <Icon icon="flowbite:close-outline" class="fs-3" />
                     </button>
-                    <HotelFilters />
+                    <CarFilters />
                 </div>
                 <div class="col col-lg-9 flex-shrink-1">
                     <div class="d-md-flex align-items-center flex-wrap">
-                        <h5 className="my-3"><b>1,024 properties</b> in Hanoi</h5>
+                        <h5 className="my-3"><b>1,024 cars</b> in Hanoi</h5>
                         <div class="flex-grow-1"/>
                         <span class="d-flex justify-content-end text-nowrap">
                             <button className='btn btn-outline-primary rounded-pill d-flex-center'>
@@ -64,7 +66,7 @@ const HotelPage = () => {
                             </button>
                         </span>
                     </div>
-                    <HotelList data={data} />
+                    <CarList data={data} />
                     <PageControl />
                 </div>
             </div>
@@ -72,4 +74,4 @@ const HotelPage = () => {
     );
 };
 
-export default HotelPage;
+export default CarPage;

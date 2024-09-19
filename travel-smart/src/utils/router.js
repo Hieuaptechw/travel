@@ -3,6 +3,7 @@ export const ROUTERS = {
         HOME:"/",
         HOTELS:"/hotels",
         TOURS:"/tours",
+        CARS:"/cars",
         ABOUT: "/about"
     },
 }

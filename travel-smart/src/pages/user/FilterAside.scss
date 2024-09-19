@@ -5,7 +5,7 @@
 
 
 @include media-breakpoint-down(lg) {
-    .-hotel-page-aside {
+    .-filter-aside {
         position: fixed;
         inset: 0;
         background: var(--bs-body-bg);
@@ -30,7 +30,7 @@
 }
 
 @include media-breakpoint-down(md) {
-    .-hotel-page-aside {
+    .-filter-aside {
         & form {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -38,7 +38,7 @@
 }
 
 @include media-breakpoint-down(sm) {
-    .-hotel-page-aside {
+    .-filter-aside {
         & form {
             grid-template-columns: 1fr;
         }
