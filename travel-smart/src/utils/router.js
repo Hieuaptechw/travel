@@ -8,11 +8,5 @@ export const ROUTERS = {
 
         
     },
-    ADMIN:{
-        DASHBOARD:"/admin/dashboard",
-        HOTEL:"/admin/hotel/",
-        ADDHOTEL:"/admin/hotel/add",
 
-        
-    }
 }
