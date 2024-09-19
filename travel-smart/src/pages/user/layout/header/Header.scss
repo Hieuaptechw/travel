@@ -6,6 +6,10 @@
         width: 150px;
         height: auto;
     }
+    
+    &:hover {
+        z-index: 1021;
+    }
 
     .custom-dropdown {
         .dropdown-menu {

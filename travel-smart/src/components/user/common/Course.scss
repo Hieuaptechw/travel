@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     gap: 1em;
-    margin: 2em 1em;
 
     .course-line {
         position: relative;
@@ -90,6 +89,8 @@
 
 @include media-breakpoint-down(md) {
     .course {
+        gap: 0.5em;
+        
         .course-label {
             font-size: 0;
             margin-inline-start: 0;

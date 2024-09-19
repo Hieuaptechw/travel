@@ -1,23 +1,25 @@
-.-trip-plan-card {
-    padding: 0.5em 0.5em 0.5em 5.5em;
-    min-height: 5.5em;
+.-trip-plan-timestamp {
+    padding: 0.25em 0.5em 0.25em 1.75em;
     margin-block: 1em;
-    position: relative;
+    margin-inline-start: 3em;
+    max-width: 360px;
+    background: var(--bs-secondary-bg);
     border-color: var(--accent) !important;
+    position: relative;
 
     &-circle {
         position: absolute;
         z-index: 10;
         border-radius: 50px;
-        width: 3.5em; height: 3.5em;
-        top: 1em; left: 1em;
+        width: 2.5em; height: 2.5em;
+        top: calc(1px - 0.3em); left: -1.5em;
         border: .25em solid var(--accent);
         box-shadow: 0 .2em .8em rgba(0, 0, 0, 0.25);
         background: var(--bs-body-bg);
     }
-
+    
     &-icon {
-        font-size: 32px;
+        font-size: 18px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -28,9 +30,9 @@
         content: "";
         background: linear-gradient(transparent 0%, var(--accent) 30%);
         position: absolute;
-        inset: -1em auto auto 2.5em;
+        inset: -1em auto auto -0.5em;
         width: .5em;
-        height: 3em;
+        height: 2em;
         z-index: 1;
     }
 
@@ -38,13 +40,9 @@
         content: "";
         background: var(--accent);
         position: absolute;
-        inset: 3em auto -3em 2.5em;
+        inset: auto auto -1em -0.5em;
         width: .5em;
+        height: 2em;
         z-index: 1;
-    }
-
-    hr {
-        margin: .25em -.5em .25em 0;
-        border-color: var(--accent);
     }
 }
