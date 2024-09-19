@@ -5,6 +5,7 @@ import MasterLayout from "./pages/user/layout/masterlayout/MasterLayout";
 import Home from "./pages/user/home/Home";
 import HotelPage from "./pages/user/hotel/HotelPage";
 import About from "./pages/user/about/About";
+import TourPage from "./pages/user/tour/TourPage";
 
 const routes = [
   {
@@ -14,6 +15,10 @@ const routes = [
   {
     path: ROUTERS.USER.HOTELS,
     component: <HotelPage/>,
+  },
+  {
+    path: ROUTERS.USER.TOURS,
+    component: <TourPage />,
   },
   {
     path: ROUTERS.USER.ABOUT,

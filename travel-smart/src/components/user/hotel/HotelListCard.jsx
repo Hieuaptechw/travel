@@ -6,7 +6,7 @@ const HotelListCard = ({ data }) => {
     return (
         <div class="-hotel-list-card d-md-flex border-top mt-4 pt-4">
             <div class="-hotel-card-image col-md-3">
-                <img src="https://placehold.co/400x300" class="rounded-2 w-100" alt="image" />
+                <img src={data.image} class="rounded-2 w-100" alt="image" />
             </div>
             <div class="-hotel-card-info d-md-flex ms-md-3">
                 <div class="flex-fill mt-2 mt-md-0">
@@ -34,7 +34,7 @@ const HotelListCard = ({ data }) => {
                         {data.amenities.map(x => <><small className="d-inline-block py-1 px-2 rounded-pill border">{x}</small>&ensp;</>)}
                     </div>
                 </div>
-                <div class="flex-fill text-md-end mt-2 mt-md-0">
+                <div class="flex-fill text-md-end mt-2 mt-md-0 ms-md-2">
                     <div className="d-inline-flex">
                         <small className='d-block'>
                             <h6 className="m-0">Exceptional</h6>
