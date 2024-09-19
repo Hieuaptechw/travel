@@ -22,7 +22,7 @@
   .no-offset-on-small {
     margin-left: 0 !important;
   }
-  .sidebar {
+  .sidebar-dashboard {
     display: none;
     display: none !important;
   }
@@ -150,7 +150,7 @@
   background-color: #f5f5f5;
 }
 .sidebar {
-  position: fixed;
+
   top: 0;
   left: 0;
   height: 100vh;

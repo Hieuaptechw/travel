@@ -1,4 +1,4 @@
-.row > * {
+/* .row > * {
   flex-shrink: 0;
   width: 100%;
   max-width: 100%;
@@ -179,4 +179,4 @@ div {
 :root {
   --swiper-theme-color: var(--color-blue-1);
   --swiper-navigation-size: 30px;
-}
+} */

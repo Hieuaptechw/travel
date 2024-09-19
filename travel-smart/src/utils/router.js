@@ -7,14 +7,16 @@ export const ROUTERS = {
         SIGNUP: "/signup",
         DESTINATION: "/destination",
         BLOG: "/blogs",
-    },
-    ADMIN:{
-        HOME:"/",
-        HOTELS:"/hotels",
         TOURS:"/tours",
         CARS:"/cars",
         ABOUT: "/about",
         CHECKOUT: "/checkout"
+    },
+    ADMIN:{
+        HOME:"/admin/dashboard",
+        HOTELS:"/hotel",
+        ADDHOTELS:"/hotel/add",
+ 
     },
 
         

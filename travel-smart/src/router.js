@@ -8,17 +8,12 @@ import Home from './pages/user/home/Home'
 import DashBoard from './pages/admin/dashboard/DashBoard';
 import Hotel from './pages/admin/hotel/Hotel';
 import AddHotel from './pages/admin/hotel/AddHotel';
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import { ROUTERS } from "./utils/router";
-import MasterLayout from "./pages/user/layout/masterlayout/MasterLayout";
-import Home from "./pages/user/home/Home";
 import HotelPage from "./pages/user/hotel/HotelPage";
 import About from "./pages/user/about/About";
 import LoginPage from "./pages/user/login";
 import SignUpPage from "./pages/user/Signup";
 import DestinationPage from "./pages/user/destinations";
-import BlogPage from "./pages/user/blogs";
+
 
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
@@ -31,7 +26,7 @@ const routes = [
     layout: MasterLayout,
   },
   {
-    path: ROUTERS.ADMIN.DASHBOARD,
+    path: ROUTERS.ADMIN.HOME,
     component: <DashBoard />,
     layout: MasterLayoutAdmin,
   },
@@ -85,11 +80,7 @@ const routes = [
     component: <DestinationPage />,
     layout: MasterLayout,
   },
-  {
-    path: ROUTERS.USER.BLOG,
-    component: <BlogPage />,
-    layout: MasterLayout,
-  },
+
 
 ];
 
