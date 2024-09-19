@@ -4,7 +4,7 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
 const TourListCard = ({ data }) => {
     return (
-        <div class="-tour-list-card d-md-flex border-top mt-4 pt-4">
+        <article class="-tour-list-card d-md-flex border-top mt-4 pt-4">
             <div class="-tour-card-image col-md-3">
                 <img src={data.image} class="rounded-2 w-100" alt="image" />
             </div>
@@ -22,10 +22,8 @@ const TourListCard = ({ data }) => {
                         </small></p>
                     </div>
                     <div className='mt-2'>
-                        <h6 className="m-0">{data.waranty}</h6>
-                    </div>
-                    <div className='mt-2 text-success'>
-                        <h6 className="m-0">{data.deal}</h6>
+                        <div className="m-0 fw-600 ">{data.waranty}</div>
+                        <div className="m-0 fw-600 text-success">{data.deal}</div>
                     </div>
                 </div>
                 <div class="flex-fill text-md-end mt-2 mt-md-0 ms-md-2">
@@ -39,7 +37,7 @@ const TourListCard = ({ data }) => {
                         </div>
                     </div>
                     <div className='mt-2'>
-                        <h6 className="m-0 text-nowrap">
+                        <p className="m-0 lh-13 text-nowrap">
                             From{" "}
                             <span className="fw-bolder">{data.adultPrice[1]} </span>
                             <big className='fs-4 fw-bolder'>{data.adultPrice[0]}</big>
@@ -49,7 +47,7 @@ const TourListCard = ({ data }) => {
                             <span className="fw-bolder">{data.childPrice[1]} </span>
                             <big className='fs-4 fw-bolder'>{data.childPrice[0]}</big>
                             <big className='fs-4'> / </big>child
-                        </h6>
+                        </p>
                     </div>
                     <div className='mt-2'>
                         <button className="btn btn-primary d-flex-center w-100 text-nowrap">
@@ -59,7 +57,7 @@ const TourListCard = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 

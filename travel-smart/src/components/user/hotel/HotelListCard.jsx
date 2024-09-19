@@ -4,7 +4,7 @@ import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
 const HotelListCard = ({ data }) => {
     return (
-        <div class="-hotel-list-card d-md-flex border-top mt-4 pt-4">
+        <article class="-hotel-list-card d-md-flex border-top mt-4 pt-4">
             <div class="-hotel-card-image col-md-3">
                 <img src={data.image} class="rounded-2 w-100" alt="image" />
             </div>
@@ -50,11 +50,11 @@ const HotelListCard = ({ data }) => {
                             {data.capacity[0]} adults
                             {data.capacity[1] > 0 && <>&ensp;&bull;&ensp;{data.capacity[1]} children</>}
                         </small></p>
-                        <h6 className="m-0">
+                        <p className="m-0 lh-13">
                             <span className="fw-bolder">{data.nightPrice[1]} </span>
                             <big className='fs-4 fw-bolder'>{data.nightPrice[0]}</big>
                             <big className='fs-4'> / </big>night
-                        </h6>
+                        </p>
                         <p className="opacity-75 m-0"><small>
                             +<span className="fw-bolder">{data.extraPrice[1]} {data.extraPrice[0]}</span>
                             {" "}taxes and charges
@@ -68,7 +68,7 @@ const HotelListCard = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     );
 };
 

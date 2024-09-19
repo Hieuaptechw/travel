@@ -53,7 +53,7 @@ const TripPlanner = () => {
             <OverlayTrigger placement="bottom" offset={[0, 20]} trigger="click" rootClose overlay={whenPicker}>
                 <div class="flex-fill" role="button">
                     <h6 class="m-0">When</h6>
-                    <p class="m-0">23 Sep <Icon icon="mdi:arrow-right" inline /> 26 Sep</p>
+                    <p class="m-0">23 Sep <Icon icon="mdi:arrow-right" inline aria-label='to' /> 26 Sep</p>
                 </div>
             </OverlayTrigger>
             <hr />

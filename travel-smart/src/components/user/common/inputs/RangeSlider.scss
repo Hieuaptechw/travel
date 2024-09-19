@@ -21,6 +21,7 @@
         inset: 37.5% calc(100% - var(--value-end)) 37.5% var(--value-start);
         background: var(--bs-primary);
         border-radius: 9999vw;
+        transition: inset .05s;
     }
     
     &-start-thumb, &-end-thumb {
@@ -33,6 +34,7 @@
         border-radius: 50%;
         transform: translateX(-50%);
         box-shadow: 0 0 0 .125em var(--bs-body-bg);
+        transition: inset .05s;
     }
     
     &-start-thumb {
