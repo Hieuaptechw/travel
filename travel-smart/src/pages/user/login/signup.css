@@ -1,0 +1,115 @@
+body {
+  background-color: #f2f6fa;
+  /* Light background similar to your screenshot */
+  font-family: "Helvetica Neue", sans-serif;
+  /* Modern, clean font */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* Center vertically */
+}
+
+.box-signup {
+  background-color: white;
+  width: 600px;
+  height: 550px;
+}
+
+.form-wrapper {
+  background-color: #fff;
+  /* White form background */
+  padding: 40px;
+  /* Comfortable padding */
+  border-radius: 10px;
+  /* Smooth rounded corners */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Soft shadow for modern look */
+  max-width: 400px;
+  /* Constrain width */
+  width: 100%;
+  /* Full width for smaller screens */
+}
+
+.input-form {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  /* Dark text color */
+  text-align: center;
+  margin-bottom: 10px;
+  /* Small spacing below */
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  /* Subtle, secondary text color */
+
+  margin-bottom: 30px;
+  /* More space below paragraph */
+}
+
+p a {
+  color: #007bff;
+  /* Blue link */
+  text-decoration: none;
+}
+
+p a:hover {
+  text-decoration: underline;
+  /* Underline on hover */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  /* Space between fields */
+  border: 1px solid #ddd;
+  /* Light border */
+  border-radius: 5px;
+  /* Slight rounding */
+  font-size: 16px;
+  /* Slightly larger text */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  /* Primary blue button */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+  /* Darker blue on hover */
+}
+
+.text-center {
+  text-align: center;
+  /* Center text */
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  /* Light footer text */
+  margin-top: 20px;
+}
