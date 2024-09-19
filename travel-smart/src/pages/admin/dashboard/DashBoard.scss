@@ -1,0 +1,73 @@
+/* DashBoard.scss */
+
+.dashboard-content {
+  color: #50352c;
+  margin-left: 30px;
+  h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 50px;
+  }
+
+  .row  {
+    
+    .col-12 {
+      margin-bottom: 15px;
+      .card {
+        color: #50352c;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+       .col-6{
+        .title {
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          font-size: 30px; // 30px
+          font-weight: 700;
+          margin: 5px 0;
+        }
+
+        .status {
+          color: #6c757d;
+          font-size: 12px;
+        }
+       }
+
+        .icon img {
+          width: 50px;
+          height: 50px;
+        }
+      }
+     
+    }
+    .chart {
+      margin-top: 10px;
+      background-color: #ffff;
+      padding: 20px;
+      border-radius: 15px;
+    }
+    .recent-booking {
+      margin-top: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+    }
+  }
+}
+

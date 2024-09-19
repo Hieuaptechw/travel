@@ -7,4 +7,5 @@ export const ROUTERS = {
         ABOUT: "/about",
         CHECKOUT: "/checkout"
     },
+
 }
