@@ -1,6 +1,6 @@
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import React, { useState } from 'react';
-import RangeSlider from '../common/RangeSlider';
+import RangeSlider from '../common/inputs/RangeSlider';
 import CheckEntry from '../common/inputs/CheckEntry';
 import RadioEntry from '../common/inputs/RadioEntry';
 
@@ -60,6 +60,7 @@ const HotelFilters = () => {
                         : priceRange[0] === 0 && priceRange[1] >= 510 ? <b>Any</b> 
                         : priceRange[0] === 0  ? <>Up to <b>USD {priceRange[1]}</b> / night</> 
                         : priceRange[1] >= 510 ? <>At least <b>USD {priceRange[0]}</b> / night</> 
+                        : priceRange[0] === priceRange[1] ? <><b>USD {priceRange[0]}</b> / night</> 
                         : <>
                             <b>USD {priceRange[0]}</b> / night 
                             ~ {priceRange[1] >= 510 ? <b>Unlimited</b> : <><b>USD {priceRange[1]}</b> / night</>}

@@ -18,7 +18,7 @@ const RangeSlider = ({min, max, step, values, onchange}) => {
             let percent = (e.clientX - sliderRect.x) / sliderRect.width;
             let value = Math.min(Math.max(percent, 0), 1) * (max - min) + min;
             let realStep = step ?? 1;
-            if (realStep > 0) value = Math.floor(value / realStep) * realStep;
+            if (realStep > 0) value = Math.round(value / realStep) * realStep;
 
             newValue[id] = value;
             console.log(newValue);
