@@ -32,10 +32,10 @@ const LoginPage = () => {
                 <span>or sign in with</span>
               </div>
               <div className="social-buttons d-flex justify-content-center mt-3">
-                <Button className="social-btn facebook-btn me-2" style={{background: "white" color: ""}} type="button">
+                <Button className="social-btn facebook-btn me-2" style={{background: "white", color: "#3554d1"}} type="button">
                   <FaFacebookF className="social-icon" /> Sign in with Facebook
                 </Button>
-                <Button className="social-btn google-btn" type="button">
+                <Button className="social-btn google-btn " style={{background: "white", color: "#d93025", border: "1px solid #d93025"}} type="button">
                   <FaGoogle className="social-icon" /> Sign in with Google
                 </Button>
               </div>

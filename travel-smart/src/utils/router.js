@@ -13,7 +13,8 @@ export const ROUTERS = {
         CARS:"/cars",
         ABOUT: "/about",
         CHECKOUT: "/checkout",
-        ERROR: "/oops"
+        ERROR: "/oops",
+        FLIGHT: "/flight"
     },
     ADMIN:{
         HOME:"/admin/dashboard",

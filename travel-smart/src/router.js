@@ -19,6 +19,7 @@ import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 import ErrorPage from './pages/user/404/Error';
+import FlightPage from './pages/user/flight/flight';
 
 const routes = [
   {
@@ -94,6 +95,11 @@ const routes = [
   {
     path: ROUTERS.USER.ERROR,
     component: <ErrorPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.FLIGHT,
+    component: <FlightPage />,
     layout: MasterLayout,
   },
 
