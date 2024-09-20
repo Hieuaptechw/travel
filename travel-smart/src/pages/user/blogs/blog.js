@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Pagination } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 import CardImg from '../../../assets/images/5.png';
 import CardImg1 from '../../../assets/images/6.png';
 import CardImg2 from '../../../assets/images/7.png';
@@ -27,7 +28,7 @@ const blogPage = () => {
             id: 3,
             date: 'Jan 06, 2023',
             title: '10 European ski destinations you should visit this winter',
-            text: 'For decades, travelers have been escaping to the Catskills — a mountainous region in upstate New York — whenever they’ve needed a reset.',
+            text: 'For decades, travelers have been escaping to the Catskill — a mountainous region in upstate New York — whenever they’ve needed a reset.',
             imgSrc: CardImg2
         },
         {
@@ -50,35 +51,65 @@ const blogPage = () => {
         <Container fluid="md">
             <Row className="mb-4">
                 <Col>
-                    <div className='title text-center p-3'>
+                    <motion.div 
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        transition={{ duration: 0.5 }} 
+                        className='title text-center p-3'
+                    >
                         <h1 className='blogs__title p-4'>Travel articles</h1>
                         <span className='blogs__titlesub p-3'>Lorem ipsum is placeholder text commonly used in site.</span>
-                    </div>
+                    </motion.div>
                 </Col>
             </Row>
             <Row>
-                <Col lg={9} md={8} sm={12} xs={12}>
-                    {blogs.map((item) => (
-                        <Card key={item.id} className="mb-4" style={{border: '0', cursor: 'pointer'}}>
-                            <Row noGutters>
-                                <Col md={4}>
-                                    <Card.Img src={item.imgSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                                </Col>
-                                <Col md={8}>
-                                    <Card.Body>
-                                        <Card.Text className="text-muted">{item.date}</Card.Text>
-                                        <Card.Title>{item.title}</Card.Title>
-                                        <Card.Text>
-                                            {item.text}
-                                        </Card.Text>
-                                    </Card.Body>
-                                </Col>
-                            </Row>
-                        </Card>
+                <Col lg={9} md={8} sm={12} xs={12} >
+                    {blogs.map((item, index) => (
+                        <motion.div 
+                            key={item.id} 
+                            initial={{ opacity: 0, y: 50 }} 
+                            animate={{ opacity: 1, y: 0 }} 
+                            transition={{ delay: index * 0.1, duration: 0.5 }} 
+                        >
+                            <Card className="mb-4" style={{ border: '0', cursor: 'pointer' }}>
+                                <Row noGutters>
+                                    <Col md={4}>
+                                        <Card.Img src={item.imgSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                                    </Col>
+                                    <Col md={8}>
+                                        <Card.Body>
+                                            <Card.Text className="text-muted">{item.date}</Card.Text>
+                                            <Card.Title>{item.title}</Card.Title>
+                                            <Card.Text >{item.text}</Card.Text>
+                                        </Card.Body>
+                                    </Col>
+                                </Row>
+                            </Card>
+                        </motion.div>
                     ))}
+                    <Pagination className="custom-pagination" style={{ padding: '35px 0px', marginBottom: "80px" }}>
+                        <Pagination.First />
+                        <Pagination.Prev />
+                        <Pagination.Item>{1}</Pagination.Item>
+                        <Pagination.Ellipsis />
+                        <Pagination.Item>{10}</Pagination.Item>
+                        <Pagination.Item>{11}</Pagination.Item>
+                        <Pagination.Item active>{12}</Pagination.Item>
+                        <Pagination.Item>{13}</Pagination.Item>
+                        <Pagination.Item disabled>{14}</Pagination.Item>
+                        <Pagination.Ellipsis />
+                        <Pagination.Item>{20}</Pagination.Item>
+                        <Pagination.Next />
+                        <Pagination.Last />
+                    </Pagination>
                 </Col>
                 <Col lg={3} md={4} sm={12} xs={12}>
-                    <div className='navbar__blogs'>
+                    <motion.div 
+                        className='navbar__blogs'
+                        initial={{ opacity: 0, x: -30 }} 
+                        animate={{ opacity: 1, x: 0 }} 
+                        transition={{ duration: 0.3 }}
+                    >
                         <div className='navbar__blogs_top mb-4'>
                             <h4>Search</h4>
                             <div className="search-container">
@@ -88,22 +119,12 @@ const blogPage = () => {
                         </div>
                         <div className='navbar__blogs_main mb-4'>
                             <h4>Categories</h4>
-                            <div className='navbar__blogs_categories d-flex justify-content-between'>
-                                <span>Hotel</span>
-                                <span>92</span>
-                            </div>
-                            <div className='navbar__blogs_categories d-flex justify-content-between'>
-                                <span>Hotel</span>
-                                <span>92</span>
-                            </div>
-                            <div className='navbar__blogs_categories d-flex justify-content-between'>
-                                <span>Hotel</span>
-                                <span>92</span>
-                            </div>
-                            <div className='navbar__blogs_categories d-flex justify-content-between'>
-                                <span>Hotel</span>
-                                <span>92</span>
-                            </div>
+                            {['Hotel', 'Restaurant', 'Travel', 'Adventure'].map((category, index) => (
+                                <div className='navbar__blogs_categories d-flex justify-content-between' key={index}>
+                                    <span>{category}</span>
+                                    <span>92</span>
+                                </div>
+                            ))}
                         </div>
                         <div className='navbar__blogs_main'>
                             <h4>Recent Posts</h4>
@@ -125,7 +146,7 @@ const blogPage = () => {
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </Col>
             </Row>
         </Container>

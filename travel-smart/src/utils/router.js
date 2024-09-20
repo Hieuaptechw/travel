@@ -12,7 +12,8 @@ export const ROUTERS = {
         TOURS:"/tours",
         CARS:"/cars",
         ABOUT: "/about",
-        CHECKOUT: "/checkout"
+        CHECKOUT: "/checkout",
+        ERROR: "/oops"
     },
     ADMIN:{
         HOME:"/admin/dashboard",

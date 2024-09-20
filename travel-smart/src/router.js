@@ -18,6 +18,7 @@ import BlogSinglePage from './pages/user/blogs/blogsingle';
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
+import ErrorPage from './pages/user/404/Error';
 
 const routes = [
   {
@@ -88,6 +89,11 @@ const routes = [
   {
     path: ROUTERS.USER.BLOGSINGLE,
     component: <BlogSinglePage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.ERROR,
+    component: <ErrorPage />,
     layout: MasterLayout,
   },
 
