@@ -261,7 +261,7 @@ const Header = () => {
                 + (activeNav === "more" ? " active" : "")
             }>
                 <Container className="p-4">
-                    <div class="row">
+                    <div class="row g-3">
                         <div className="col-12 col-lg-3">
                             <h3>Introduction</h3>
                             <ul class="navbar-nav lh-lg">

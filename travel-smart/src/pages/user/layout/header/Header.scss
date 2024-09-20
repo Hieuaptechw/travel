@@ -107,7 +107,9 @@
 .header-section {
     position: absolute;
     top: 0%;
-    inset: -1em 0 0 0;
+    inset: -1em 0 auto 0;
+    max-height: calc(100vh + 1em);
+    overflow-y: auto;
     padding-block: 8em 1em;
     opacity: 0;
     background: linear-gradient(#051036ee, #05103600);
@@ -143,5 +145,9 @@
         &.mobile-active #navbar-nav-main {
             bottom: 1em;
         }
+    }
+
+    .header-section {
+        padding-bottom: 15em;
     }
 }
