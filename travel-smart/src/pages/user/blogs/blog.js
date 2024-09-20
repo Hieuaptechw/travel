@@ -59,7 +59,7 @@ const blogPage = () => {
             <Row>
                 <Col lg={9} md={8} sm={12} xs={12}>
                     {blogs.map((item) => (
-                        <Card key={item.id} className="mb-4" style={{border: '0'}}>
+                        <Card key={item.id} className="mb-4" style={{border: '0', cursor: 'pointer'}}>
                             <Row noGutters>
                                 <Col md={4}>
                                     <Card.Img src={item.imgSrc} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -109,7 +109,7 @@ const blogPage = () => {
                             <h4>Recent Posts</h4>
                             <div className='navbar__blogs_post'>
                                 {blogs.slice(0, 5).map((item) => (
-                                    <Card key={item.id} className="mb-3" style={{ width: '100%', height: '7rem', overflow: 'hidden', border: 'none' }}>
+                                    <Card key={item.id} className="mb-3" style={{ width: '100%', height: '7rem', overflow: 'hidden', border: 'none', cursor: 'pointer' }}>
                                         <Row noGutters>
                                             <Col xs={5}>
                                                 <Card.Img src={item.imgSrc} style={{ width: '100%', height: '8rem', objectFit: 'cover' }} />
@@ -118,7 +118,6 @@ const blogPage = () => {
                                                 <Card.Body className="d-flex flex-column justify-content-center p-1">
                                                     <Card.Text className="text-muted">{item.date}</Card.Text>
                                                     <Card.Title style={{ fontSize: '0.875rem' }}>{item.title}</Card.Title>
-                                                    
                                                 </Card.Body>
                                             </Col>
                                         </Row>
