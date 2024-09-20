@@ -1,3 +1,5 @@
+import Wishlist from "../pages/user/setting/Wishlist";
+
 export const ROUTERS = {
 
     USER: {
@@ -14,7 +16,9 @@ export const ROUTERS = {
         CARS:"/cars",
         CARSINGLE:"/cars/1",
         ABOUT: "/about",
-        CHECKOUT: "/checkout"
+        CHECKOUT: "/checkout",
+        SETTING:"/setting",
+        WISHLIST:"/setting/wishlist"
     },
     ADMIN:{
         HOME:"/admin/dashboard",
@@ -24,6 +28,11 @@ export const ROUTERS = {
         ADDCAR:"/admin/car/add",
         TOURS:"/admin/tour",
         CARS:"/admin/car",
+        HOTELS:"/admin/hotel",
+        ADDHOTELS:"admin/hotel/add",
+        RECOVERYHOTEL:"admin/hotel/recovery",
+        BOOKING:"/admin/booking",
+        
     },
 
         

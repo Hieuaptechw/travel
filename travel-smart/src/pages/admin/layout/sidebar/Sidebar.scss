@@ -1,6 +1,6 @@
 .sidebar {
     background-color: #ffffff;
-    padding: 20px;
+   
     height: 100vh!important;
     position: sticky;
    margin-top: 20px!important;
@@ -14,7 +14,7 @@
         align-items: center;
         cursor: pointer;
       }
-
+   
       .dropdown-menu {
         height: 105px!important;
         position: static !important;
@@ -27,7 +27,12 @@
    
         margin-top: none !important;
         .dropdown-item{
-
+       
+          padding: 0!important;
+          
+        }
+        .dropdown-item:active{
+          background-color:#fff;
           padding: 0!important;
           
         }
@@ -37,12 +42,15 @@
      
         font-weight: 500;
         display: block;
-        color: #50352c;
+        
         font-size: 15px;
         flex-direction: row;
         align-items: center;
         padding-left: 20px;
         margin-top: 30px;
+        a{
+          color: #50352c!important;
+        }
         img {
           margin-right: 10px;
           width: 25px;

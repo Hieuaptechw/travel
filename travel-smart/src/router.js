@@ -23,6 +23,10 @@ import Car from './pages/admin/car/Car';
 import HotelSingPage from './pages/user/hotel/HotelSinglePage';
 import TourSingle from './pages/user/tour/TourSingle';
 import CarSingle from './pages/user/car/CarSingle';
+import BookingAd from './pages/admin/booking/bookingad';
+import Setting from './pages/user/setting/Setting';
+import Recovery from './pages/admin/hotel/Recovery';
+import Wishlist from './pages/user/setting/Wishlist';
 
 const routes = [
   {
@@ -76,6 +80,17 @@ const routes = [
     layout: MasterLayout,
   },
   {
+    path: ROUTERS.ADMIN.RECOVERYHOTEL,
+    component: <Recovery />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.ADMIN.BOOKING,
+    component: <BookingAd />,
+    layout: MasterLayoutAdmin,
+  },
+  
+  {
     path: ROUTERS.USER.TOURS,
     component: <TourPage />,
     layout: MasterLayout,
@@ -120,6 +135,16 @@ const routes = [
     path: ROUTERS.USER.DESTINATION,
     component: <DestinationPage />,
     layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.SETTING,
+    component: <Setting />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.USER.WISHLIST,
+    component: <Wishlist />,
+    layout: MasterLayoutAdmin,
   },
 
 
