@@ -1,0 +1,10 @@
+
+
+.tour-content .tab-control .tab-nav li a:hover {
+    color: red; /* Change on hover */
+}
+
+.tour-content .tab-control .tab-nav li.active a {
+    color: red !important; /* Make sure it targets the anchor */
+    text-decoration: underline !important;
+}

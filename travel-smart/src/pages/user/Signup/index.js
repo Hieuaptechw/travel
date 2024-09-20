@@ -5,7 +5,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { FaFacebookF, FaGoogle } from 'react-icons/fa'; // Import icons
+import { Icon } from '@iconify-icon/react/dist/iconify.mjs'; // Import icons
 
 const SignUpPage = () => {
     return (
@@ -51,11 +51,11 @@ const SignUpPage = () => {
                             <div className="social-buttons d-flex justify-content-between">
                                 
                                 <Button className="social-btn facebook-btn" variant="outline-primary" type="button">
-                                    <FaFacebookF className="social-icon" /> Sign up with Facebook
+                                    <Icon icon="fa:facebook-f" inline className="social-icon" /> Sign up with Facebook
                                 </Button>
 
                                 <Button className="social-btn google-btn " variant="outline-danger" type="button">
-                                    <FaGoogle className="social-icon" /> Sign up with Google
+                                    <Icon icon="fa:google" inline className="social-icon" /> Sign up with Google
                                 </Button>
                             </div>
                             <div className='sub-1'>

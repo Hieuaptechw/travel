@@ -105,7 +105,7 @@ const CheckoutPage = () => {
     return (
         <div class="container">
             <div class="sticky-top py-3">
-                <div class="bg-body rounded-4 p-2 p-lg-3">
+                <div class="-checkout-course bg-body rounded-4 p-2 p-lg-3">
                     <Course steps={["Review", "Details", "Payment", "Booking", "Receipt"]} current={stepVisible} />
                 </div>
             </div>
