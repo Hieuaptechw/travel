@@ -130,3 +130,70 @@
     margin-right: 10px; /* Space between icon and text */
   
 }
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* khoảng cách giữa các nút */
+}
+
+.social-btn {
+    flex: 1; /* Để các nút có thể giãn ra đầy đủ nếu cần */
+}
+
+.facebook-btn {
+    background-color: #3b5998; /* Màu Facebook */
+    color: white;
+}
+
+.google-btn {
+    background-color: #db4437; /* Màu Google */
+    color: white;
+}
+
+.social-icon {
+    margin-right: 10px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.social-btn {
+    flex: 1; /* Allow buttons to grow and shrink */
+    min-width: 120px; /* Minimum width for buttons */
+    max-width: 250px; /* Limit maximum width of buttons */
+    height: 50px; /* Adjust height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px; /* Adjust font size for smaller screens */
+    color: #fff;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+}
+
+.facebook-btn {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.google-btn {
+    background-color: #db4437; /* Google color */
+}
+
+.facebook-btn:hover {
+    background-color: #2d4373; /* Darker Facebook color */
+}
+
+.google-btn:hover {
+    background-color: #c1351d; /* Darker Google color */
+}
+
+.social-icon {
+    margin-right: 10px; /* Space between icon and text */
+}

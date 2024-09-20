@@ -1,12 +1,6 @@
-/*
-
-*/
-.login{
-    background-color: #e5f0fd;
-}
 #login {
     padding: 60px 0;
-    background-color: #e5f0fd /* Adjust based on your design */
+    background-color: #f8f9fa; /* Adjust based on your design */
 }
 
 .login-form {
@@ -44,7 +38,7 @@
 
 .input-field {
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Màu border giống như bên SignUp */
     box-sizing: border-box;
     padding: 12px;
     height: 60px;
@@ -72,10 +66,14 @@
     background-color: #0a58ca;
 }
 
+.forgot-pass {
+    text-align: center;
+    padding-top: 10px; /* Adjust padding */
+}
+
 .sub {
     text-align: center;
     padding-top: 20px; /* Adjust padding */
-    
 }
 
 .sub-1 {
@@ -113,26 +111,24 @@
 
 .facebook-btn {
     background-color: #3b5998; /* Facebook color */
-    height: 60px;
-    
+    border: 1px solid #3b5998; /* Thêm border cùng màu với nền */
 }
 
 .google-btn {
     background-color: #db4437; /* Google color */
-    height: 60px;
-    
-    
+    border: 1px solid #db4437; /* Thêm border cùng màu với nền */
 }
 
 .facebook-btn:hover {
     background-color: #2d4373; /* Darker Facebook color */
+    border: 1px solid #2d4373; /* Border khi hover cùng màu với nền */
 }
 
 .google-btn:hover {
     background-color: #c1351d; /* Darker Google color */
+    border: 1px solid #c1351d; /* Border khi hover cùng màu với nền */
 }
 
 .social-icon {
     margin-right: 10px; /* Space between icon and text */
-  
 }
