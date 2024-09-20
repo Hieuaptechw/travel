@@ -10,7 +10,7 @@ const AddHotel = () => {
 
   return (
     <div className="hotel-content">
-      <h1>Add Hotel</h1>
+      <h3>Add Hotel</h3>
       <p>Hotel manager</p>
       <div className="row tab-control">
         <div className="col-12 ">
@@ -447,9 +447,9 @@ const AddHotel = () => {
                   </div>
                 </div>
                 <div className="col-2">
-                  <a className="save">
-                    Save changes<i class="bi bi-arrow-up-right"></i>
-                  </a>
+                <a className="save btn btn-primary">
+                      Save changes<i class="bi bi-arrow-up-right"></i>
+                    </a>
                 </div>
               </div>
             </div>

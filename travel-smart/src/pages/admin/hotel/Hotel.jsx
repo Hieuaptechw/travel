@@ -10,7 +10,7 @@ const Hotel = () => {
 
   return (
     <div className="hotel-content">
-      <h1>All Hotel</h1>
+      <h3>All Hotel</h3>
       <p>Hotel manager</p>
       <div className="row tab-control">
         <div className="col-12 ">
@@ -34,14 +34,8 @@ const Hotel = () => {
               <a href="#">Processing</a>
             </li>
             <li
-              className={activeTab === "confirmed" ? "active" : ""}
-              onClick={() => handleTabClick("confirmed")}
-            >
-              <a href="#">Confirmed</a>
-            </li>
-            <li
-              className={activeTab === "confirmed" ? "active" : ""}
-              onClick={() => handleTabClick("confirmed")}
+              className={activeTab === "cancelled" ? "active" : ""}
+              onClick={() => handleTabClick("cancelled")}
             >
               <a href="#">Cancelled</a>
             </li>
@@ -50,9 +44,116 @@ const Hotel = () => {
         <div className="col-12">
           {activeTab === "allBooking" && (
             <div className="tab-content">
-              <table class="table">
+              <div className="tab-content">
+                <table class="custom-table">
+                  <thead>
+                    <tr className="custom-table-header">
+                      <th scope="col">
+                        <input type="checkbox" />
+                      </th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Location</th>
+                      <th scope="col">Author</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Review</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <input type="checkbox" />
+                      </td>
+                      <td>The May Fair Hotel</td>
+                      <td>London</td>
+                      <td>Hieuaptech</td>
+                      <td>
+                        <span class="custom-status cancelled">Cancelled </span>
+                      </td>
+                      <td>
+                        <span>4.8</span>
+                      </td>
+            
+                      <td>
+                        04/04/2022
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          )}
+          {activeTab === "complete" && (
+             <div className="tab-content">
+             <div className="tab-content">
+               <table class="custom-table">
+                 <thead>
+                   <tr className="custom-table-header">
+                     <th scope="col">
+                       <input type="checkbox" />
+                     </th>
+                     <th scope="col">Name</th>
+                     <th scope="col">Location</th>
+                     <th scope="col">Author</th>
+                     <th scope="col">Status</th>
+                     <th scope="col">Review</th>
+                     <th scope="col">Date</th>
+                     <th scope="col">Actions</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td>
+                       <input type="checkbox" />
+                     </td>
+                     <td>The May Fair Hotel</td>
+                     <td>London</td>
+                     <td>Hieuaptech</td>
+                     <td>
+                       <span class="custom-status complete">Complete </span>
+                     </td>
+                     <td>
+                       <span>4.8</span>
+                     </td>
+           
+                     <td>
+                       04/04/2022
+                     </td>
+                     <td>
+                       <button class="custom-action-btn btn custom-view-btn">
+                         <i class="bi bi-eye-fill"></i>
+                       </button>
+                       <button class="custom-action-btn btn custom-edit-btn">
+                         <i class="bi bi-pencil-fill"></i>
+                       </button>
+                       <button class="custom-action-btn btn custom-delete-btn">
+                         <i class="bi bi-trash-fill"></i>
+                       </button>
+                     </td>
+                   </tr>
+                 </tbody>
+               </table>
+             </div>
+           </div>
+          )}
+          {activeTab === "processing" && (
+            <div className="tab-content">
+            <div className="tab-content">
+              <table class="custom-table">
                 <thead>
-                  <tr className="tabel-header">
+                  <tr className="custom-table-header">
                     <th scope="col">
                       <input type="checkbox" />
                     </th>
@@ -60,112 +161,38 @@ const Hotel = () => {
                     <th scope="col">Location</th>
                     <th scope="col">Author</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Reviews</th>
+                    <th scope="col">Review</th>
                     <th scope="col">Date</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>
-                      <input type="checkbox" />
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                      <span class="status pending">Pending</span>
-                    </td>
-                    <td>
-                      <span className="review">4.8</span>
-                    </td>
-                    <td>04/04/2022</td>
-                    <td>
-                      <button class="action-btn view-btn">
-                        <i class="bi bi-eye-fill"></i>
-                      </button>
-                      <button class="action-btn edit-btn">
-                        <i class="bi bi-pencil-fill"></i>
-                      </button>
-                      <button class="action-btn delete-btn">
-                        <i class="bi bi-trash-fill"></i>
-                      </button>
-                    </td>
-                  </tr>
                   <tr>
                     <td>
                       <input type="checkbox" />
                     </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>The May Fair Hotel</td>
+                    <td>London</td>
+                    <td>Hieuaptech</td>
                     <td>
-                      <span class="status pending">Pending</span>
+                      <span class="custom-status processing">Processing
+                      </span>
                     </td>
                     <td>
-                      <span className="review">4.8</span>
+                      <span>4.8</span>
                     </td>
-                    <td>04/04/2022</td>
+          
                     <td>
-                      <button class="action-btn view-btn">
+                      04/04/2022
+                    </td>
+                    <td>
+                      <button class="custom-action-btn btn custom-view-btn">
                         <i class="bi bi-eye-fill"></i>
                       </button>
-                      <button class="action-btn edit-btn">
+                      <button class="custom-action-btn btn custom-edit-btn">
                         <i class="bi bi-pencil-fill"></i>
                       </button>
-                      <button class="action-btn delete-btn">
-                        <i class="bi bi-trash-fill"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="checkbox" />
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                      <span class="status pending">Pending</span>
-                    </td>
-                    <td>
-                      <span className="review">4.8</span>
-                    </td>
-                    <td>04/04/2022</td>
-                    <td>
-                      <button class="action-btn view-btn">
-                        <i class="bi bi-eye-fill"></i>
-                      </button>
-                      <button class="action-btn edit-btn">
-                        <i class="bi bi-pencil-fill"></i>
-                      </button>
-                      <button class="action-btn delete-btn">
-                        <i class="bi bi-trash-fill"></i>
-                      </button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <input type="checkbox" />
-                    </td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>
-                      <span class="status complete">Complete</span>
-                    </td>
-                    <td>
-                      <span className="review">4.8</span>
-                    </td>
-                    <td>04/04/2022</td>
-                    <td>
-                      <button class="action-btn view-btn">
-                        <i class="bi bi-eye-fill"></i>
-                      </button>
-                      <button class="action-btn edit-btn">
-                        <i class="bi bi-pencil-fill"></i>
-                      </button>
-                      <button class="action-btn delete-btn">
+                      <button class="custom-action-btn btn custom-delete-btn">
                         <i class="bi bi-trash-fill"></i>
                       </button>
                     </td>
@@ -173,26 +200,65 @@ const Hotel = () => {
                 </tbody>
               </table>
             </div>
+          </div>
           )}
-          {activeTab === "complete" && (
+          {activeTab === "cancelled" && (
             <div className="tab-content">
-              <p>Content for Complete</p>
-            </div>
-          )}
-          {activeTab === "processing" && (
             <div className="tab-content">
-              <p>Content for Processing</p>
+              <table class="custom-table">
+                <thead>
+                  <tr className="custom-table-header">
+                    <th scope="col">
+                      <input type="checkbox" />
+                    </th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Review</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" />
+                    </td>
+                    <td>The May Fair Hotel</td>
+                    <td>London</td>
+                    <td>Hieuaptech</td>
+                    <td>
+                      <span class="custom-status cancelled">Cancelled
+                      </span>
+                    </td>
+                    <td>
+                      <span>4.8</span>
+                    </td>
+          
+                    <td>
+                      04/04/2022
+                    </td>
+                    <td>
+                      <button class="custom-action-btn btn custom-view-btn">
+                        <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button class="custom-action-btn btn custom-edit-btn">
+                        <i class="bi bi-pencil-fill"></i>
+                      </button>
+                      <button class="custom-action-btn btn custom-delete-btn">
+                        <i class="bi bi-trash-fill"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          )}
-          {activeTab === "confirmed" && (
-            <div className="tab-content">
-              <p>Content for Confirmed</p>
-            </div>
+          </div>
           )}
         </div>
         <div className="col-12">
           <ul class="pagination">
-     
             <li class="page-item">
               <a class="page-link" href="#">
                 1
@@ -208,7 +274,6 @@ const Hotel = () => {
                 3
               </a>
             </li>
-          
           </ul>
         </div>
       </div>

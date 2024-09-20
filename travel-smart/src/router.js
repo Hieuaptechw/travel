@@ -18,6 +18,10 @@ import DestinationPage from "./pages/user/destinations";
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
+import BookingAd from './pages/admin/booking/bookingad';
+import Setting from './pages/user/setting/Setting';
+import Recovery from './pages/admin/hotel/Recovery';
+import Wishlist from './pages/user/setting/Wishlist';
 
 const routes = [
   {
@@ -31,20 +35,26 @@ const routes = [
     layout: MasterLayoutAdmin,
   },
   {
-    path: ROUTERS.ADMIN.HOTEL,
+    path: ROUTERS.ADMIN.HOTELS,
     component: <Hotel />,
     layout: MasterLayoutAdmin,
   },
   {
-    path: ROUTERS.ADMIN.ADDHOTEL,
+    path: ROUTERS.ADMIN.ADDHOTELS,
     component: <AddHotel />,
     layout: MasterLayoutAdmin,
   },
   {
-    path: ROUTERS.USER.HOTELS,
-    component: <HotelPage/>,
-    layout: MasterLayout,
+    path: ROUTERS.ADMIN.RECOVERYHOTEL,
+    component: <Recovery />,
+    layout: MasterLayoutAdmin,
   },
+  {
+    path: ROUTERS.ADMIN.BOOKING,
+    component: <BookingAd />,
+    layout: MasterLayoutAdmin,
+  },
+  
   {
     path: ROUTERS.USER.TOURS,
     component: <TourPage />,
@@ -79,6 +89,16 @@ const routes = [
     path: ROUTERS.USER.DESTINATION,
     component: <DestinationPage />,
     layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.SETTING,
+    component: <Setting />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.USER.WISHLIST,
+    component: <Wishlist />,
+    layout: MasterLayoutAdmin,
   },
 
 
