@@ -7,5 +7,5 @@ const instance = axios.create({
   }
 });
 
-// Xuất instance để sử dụng trong các file khác
+
 export default instance;
