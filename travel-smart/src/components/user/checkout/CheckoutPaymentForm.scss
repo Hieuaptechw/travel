@@ -1,0 +1,21 @@
+.-checkout-payment {
+    .collapse, .collapsing {
+        margin-block: 0;
+        padding-block: 0;
+    }
+}
+
+.-payment-card-support-button {
+    display: inline-block;
+    height: 2em;
+    width: 4em;
+    border: 1px solid var(--bs-primary-border-subtle);
+    position: relative;
+    border-radius: .25em;
+    > * {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
