@@ -16,3 +16,8 @@ body {
 .square {
     aspect-ratio: 1;
 }
+
+.-receipt-paid {
+    opacity: 0.5;
+    text-decoration: line-through;
+}

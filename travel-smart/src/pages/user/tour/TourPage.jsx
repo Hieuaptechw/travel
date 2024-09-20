@@ -34,7 +34,7 @@ const TourPage = () => {
             </div>
             <div class="row-lg d-lg-flex">
                 <div class={
-                    "-filter-aside col col-lg-3 flex-shrink-1 me-lg-4 mb-4"
+                    "-filter-aside col col-lg-3 flex-shrink-1 me-lg-4 mb-lg-4"
                     + (filtersShown ? " show" : "")
                 }>
                     <button className='btn d-flex align-items-center d-lg-none p-2 mb-4'

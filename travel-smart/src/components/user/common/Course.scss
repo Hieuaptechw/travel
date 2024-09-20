@@ -9,7 +9,6 @@
     display: flex;
     align-items: center;
     gap: 1em;
-    margin: 2em 1em;
 
     .course-line {
         position: relative;
@@ -24,7 +23,7 @@
         position: absolute;
         inset: 0;
         background: var(--bs-primary);
-        transition: right .2s;
+        transition: right .5s;
         border-radius: 99999vw;
     }
     .in-progress ~ .course-line::before {
@@ -47,13 +46,14 @@
         background: var(--bs-secondary-bg);
         border-radius: 99999vw;
         box-shadow: inset 0 0 0 0 var(--bs-primary);
-        transition: color .2s, box-shadow .2s, background .2s;
+        transition: color, box-shadow, background;
+        transition-duration: .5s;
     }
 
     .in-progress .course-circle {
         box-shadow: inset 0 0 0 1.2em var(--bs-primary);
         color: var(--bs-light);
-        transition-delay: all 0s, background .2s;
+        transition-delay: all 0s, background;
     }
 
     .done .course-circle {
@@ -62,11 +62,13 @@
     }
 
     .course-number {
-        transition: transform .2s;
+        transition: transform, opacity;
+        transition-duration: .5s;
     }
 
     .done .course-number {
-        transform: scale(0);
+        transform: scale(2);
+        opacity: 0;
     }
 
     .course-check {
@@ -74,7 +76,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%) scale(0);
-        transition: transform .2s;
+        transition: transform;
+        transition-duration: .5s;
         font-size: 1.25em;
     }
 
@@ -88,12 +91,15 @@
     }
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(lg) {
     .course {
+        gap: 0.5em;
+        
         .course-label {
             font-size: 0;
             margin-inline-start: 0;
-            transition: font-size .2s, margin-inline-start .2s;
+            transition: font-size, margin-inline-start;
+            transition-duration: .5s;
         }
         .in-progress .course-label {
             font-size: 1em;
