@@ -3,8 +3,9 @@ import './TripPlan.scss';
 import TripPlanCard from './TripPlanCard';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 import TripPlanTimestamp from './TripPlanTimestamp';
+import { Spinner } from 'react-bootstrap';
 
-const TripPlan = () => {
+const TripPlan = ({paidNow}) => {
     return (
         <div class="-trip-plan">
             <TripPlanCard color="var(--bs-blue)" icon="carbon:chevron-up-outline">
@@ -28,9 +29,12 @@ const TripPlan = () => {
                 <div class="d-flex">
                     <div class="flex-fill">
                         Ticket price{" "}
-                        <small class="opacity-75">(paid now)</small>
+                        <small class="opacity-75">(paid{paidNow || " now"})</small>
                     </div>
-                    <div class="text-end text-nowrap fw-bold">USD 288</div>
+                    <div className={
+                        "text-end text-nowrap fw-bold"
+                        + (paidNow ? " -receipt-paid" : "")
+                    }>USD 288</div>
                 </div>
             </TripPlanCard>
 
@@ -77,6 +81,13 @@ const TripPlan = () => {
                     8 nights<br/>
                     1 &times; Fireplace Room
                 </div>
+                {paidNow && <>
+                    <hr />
+                    <div>
+                        <Spinner size="sm" className="me-2" />
+                        Finishing reservation procedure...
+                    </div>
+                </>}
                 <hr />
                 <div class="d-flex">
                     <div class="flex-fill">
@@ -136,9 +147,12 @@ const TripPlan = () => {
                 <div class="d-flex">
                     <div class="flex-fill">
                         Ticket price{" "}
-                        <small class="opacity-75">(paid now)</small>
+                        <small class="opacity-75">(paid{paidNow || " now"})</small>
                     </div>
-                    <div class="text-end text-nowrap fw-bold">USD 288</div>
+                    <div className={
+                        "text-end text-nowrap fw-bold"
+                        + (paidNow ? " -receipt-paid" : "")
+                    }>USD 288</div>
                 </div>
             </TripPlanCard>
 

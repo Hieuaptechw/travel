@@ -2,7 +2,7 @@ import React from 'react';
 import './TripPlanCard.scss';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
-const TripSummary = ({className}) => {
+const TripSummary = ({className, paidNow}) => {
     return (
         <div className={className}>
             <div>
@@ -40,11 +40,14 @@ const TripSummary = ({className}) => {
                 <div class="d-flex">
                     <div class="flex-fill">
                         Travel Smart service fee{" "}
-                        <small class="opacity-75">(paid now)</small>
+                        <small class="opacity-75">(paid{paidNow || " now"})</small>
                     </div>
-                    <div class="text-end text-nowrap fw-bold">USD 5.00</div>
+                    <div className={
+                        "text-end text-nowrap fw-bold"
+                        + (paidNow ? " -receipt-paid" : "")
+                    }>USD 5.00</div>
                 </div>
-                <hr class="mt-1 mb-0" />
+                <hr class="my-1" />
                 <div class="d-flex align-items-baseline">
                     <div class="flex-fill">Total</div>
                     <div class="text-end text-nowrap fw-bold">
@@ -52,21 +55,31 @@ const TripSummary = ({className}) => {
                         <big class="fs-4">1,008.40</big>
                     </div>
                 </div>
-                <hr class="my-0" />
+                <hr class="my-1" />
                 <div class="d-flex align-items-baseline">
-                    <div class="flex-fill">Due now</div>
-                    <div class="text-end text-nowrap fw-bold">
+                    <div class="flex-fill">
+                        {paidNow ? "Paid" : "Due now"}
+                    </div>
+                    <div className={
+                        "text-end text-nowrap fw-bold"
+                        + (paidNow ? " -receipt-paid" : "")
+                    }>
                         USD{" "}
-                        <big class="fs-4">581.00</big>
+                        {!paidNow ? <big class="fs-4">581.00</big> : <>581.00</>}
                     </div>
                 </div>
-                <div class="d-flex">
-                    <div class="flex-fill">Due later</div>
-                    <div class="text-end text-nowrap fw-bold">USD 427.40</div>
+                <div class="d-flex align-items-baseline">
+                    <div class="flex-fill">
+                        {paidNow ? "Remaining" : "Due later"}
+                    </div>
+                    <div class="text-end text-nowrap fw-bold">
+                        USD{" "}
+                        {paidNow ? <big class="fs-4">427.40</big> : <>427.40</>}
+                    </div>
                 </div>
                 <small class="d-block mt-2 opacity-75">
-                    VAT and other taxes included.{" "}
-                    This fee does not include extra fees made during the trip.{" "}
+                    {paidNow && <>VAT and other taxes included.{" "}
+                    This fee does not include extra fees made during the trip.{" "}</>}
                     Car rental fares may vary depending on factors such as wait times during trip.
                 </small>
             </div>
