@@ -82,6 +82,21 @@
 
 }
 
+#nav-bg {
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 60em;
+    opacity: 0;
+    z-index: 1051;
+    background: linear-gradient(#051036ee, #051036cc, #05103699, #05103655, #05103633, #05103611, #05103600);
+    pointer-events: none;
+    transition: opacity .4s;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
 .header-section {
     position: absolute;
     top: 0%;
@@ -90,6 +105,9 @@
     opacity: 0;
     color: var(--bs-light);
     z-index: 1051;
+    transition: opacity .2s, transform .2s;
+    transform: translateY(1em);
+    pointer-events: none;
     
     ::before {
         z-index: -1;
@@ -97,5 +115,7 @@
 
     &.active {
         opacity: 1;
+        transform: none;
+        pointer-events: unset;
     }
 }
