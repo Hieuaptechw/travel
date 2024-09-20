@@ -13,11 +13,11 @@ import About from "./pages/user/about/About";
 import LoginPage from "./pages/user/login";
 import SignUpPage from "./pages/user/Signup";
 import DestinationPage from "./pages/user/destinations";
-
-
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
+import AddTour from './pages/admin/tour/AddTour';
+import AddCar from './pages/admin/car/AddCar';
 
 const routes = [
   {
@@ -31,13 +31,23 @@ const routes = [
     layout: MasterLayoutAdmin,
   },
   {
-    path: ROUTERS.ADMIN.HOTEL,
+    path: ROUTERS.ADMIN.HOTELS,
     component: <Hotel />,
     layout: MasterLayoutAdmin,
   },
   {
-    path: ROUTERS.ADMIN.ADDHOTEL,
+    path: ROUTERS.ADMIN.ADDHOTELS,
     component: <AddHotel />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.ADMIN.ADDTOUR,
+    component: <AddTour />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.ADMIN.ADDCAR,
+    component: <AddCar />,
     layout: MasterLayoutAdmin,
   },
   {
@@ -55,6 +65,7 @@ const routes = [
     component: <CarPage />,
     layout: MasterLayout,
   },
+
   {
     path: ROUTERS.USER.ABOUT,
     component: <About />,

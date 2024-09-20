@@ -232,38 +232,38 @@ const AddHotel = () => {
                   <input
                     type="text"
                     class="form-control mh-70"
-                    placeholder="Hotel Name"
+                    placeholder="Location"
                   />
                 </div>
                 <div class="mb-3">
                   <input
                     type="text"
                     class="form-control mh-70"
-                    placeholder="Hotel Name"
+                    placeholder="Real address"
                   />
                 </div>
                 <div class="col">
                   <input
                     type="text"
                     class="form-control mh-70"
-                    placeholder="First name"
-                    aria-label="First name"
+                    placeholder="Map Latitutde"
+                    aria-label="Map Latitutde"
                   />
                 </div>
                 <div class="col">
                   <input
                     type="text"
                     class="form-control mh-70"
-                    placeholder="First name"
-                    aria-label="First name"
+                    placeholder="Map Longtitute"
+                    aria-label="Map Longtitute"
                   />
                 </div>
                 <div class="col">
                   <input
                     type="text"
                     class="form-control mh-70"
-                    placeholder="Last name"
-                    aria-label="Last name"
+                    placeholder="Map Zoom"
+                    aria-label="Map Zoom"
                   />
                 </div>
                 <div className="mt-4">

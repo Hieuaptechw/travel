@@ -17,7 +17,8 @@ export const ROUTERS = {
         HOME:"/admin/dashboard",
         HOTELS:"/hotel",
         ADDHOTELS:"/hotel/add",
- 
+        ADDTOUR:"/tour/add",
+        ADDCAR:"/car/add",
     },
 
         
