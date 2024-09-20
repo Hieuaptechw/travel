@@ -30,3 +30,13 @@
 .fs-30{
     font-size: 30px;
 }
+.icon-transition {
+    transition: all 0.2s ease-out;
+}
+
+.icon-rotate {
+    transform: rotate(180deg);
+}
+.bg-light-success {
+    background-color: rgba(158, 229, 160, 0.5); 
+}

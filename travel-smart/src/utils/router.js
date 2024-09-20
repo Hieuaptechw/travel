@@ -10,7 +10,9 @@ export const ROUTERS = {
         HOTELS:"/hotels",
         HOTELSINGLE:"/hotels/1",
         TOURS:"/tours",
+        TOURSINGLE:"/tours/1",
         CARS:"/cars",
+        CARSINGLE:"/cars/1",
         ABOUT: "/about",
         CHECKOUT: "/checkout"
     },

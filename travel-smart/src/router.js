@@ -19,6 +19,8 @@ import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 import HotelSingPage from './pages/user/hotel/HotelSinglePage';
+import TourSingle from './pages/user/tour/TourSingle';
+import CarSingle from './pages/user/car/CarSingle';
 
 const routes = [
   {
@@ -57,8 +59,18 @@ const routes = [
     layout: MasterLayout,
   },
   {
+    path: ROUTERS.USER.TOURSINGLE,
+    component: <TourSingle />,
+    layout: MasterLayout,
+  },
+  {
     path: ROUTERS.USER.CARS,
     component: <CarPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.CARSINGLE,
+    component: <CarSingle />,
     layout: MasterLayout,
   },
   {
