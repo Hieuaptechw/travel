@@ -1,3 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
 .header-main {
     z-index: 1052;
 
@@ -6,7 +11,11 @@
         height: 5em;
         z-index: 1052;
 
-        .navbar-brand {
+        > .container {
+            justify-content: start;
+        }
+
+        .navbar-brand, .navbar-toggler {
             background-color: var(--bs-body-bg);
             box-shadow: 0 0.5em 1em #0004;
             width: 3.5em;
@@ -14,13 +23,17 @@
             border-radius: 50%;
             position: relative;
             
-            .logo {
+            > * {
                 position: absolute;
                 left: 50%;
                 top: 50%;
                 transform: translate(-48%, -50%);
                 height: 2.5em;
             }
+        }
+        .navbar-toggler {
+            width: 4.5em;
+            height: 4.5em;
         }
 
         .navbar-nav {
@@ -29,6 +42,8 @@
             box-shadow: 0 0.5em 1em #0004;
             border-radius: 99999vw;
             padding-inline: 1em;
+            flex-direction: row;
+            width: auto;
         }
 
         .navbar-nav > :is(.navbar-main, *) {
@@ -37,14 +52,6 @@
             line-height: 3.5em;
             padding: 0 1em;
         }
-
-        .navbar-toggler {
-            border: none;
-            background-color: #007bff;
-            color: #fff;
-            border-radius: 5px;
-        }
-
         .navbar-collapse {
             justify-content: space-between;
         }
@@ -85,12 +92,12 @@
 #nav-bg {
     position: absolute;
     inset: 0 0 auto 0;
-    height: 60em;
     opacity: 0;
     z-index: 1051;
-    background: linear-gradient(#051036ee, #051036cc, #05103699, #05103655, #05103633, #05103611, #05103600);
+    background: linear-gradient(#051036ee, #05103677);
     pointer-events: none;
     transition: opacity .4s;
+    height: 100vh;
 
     &.active {
         opacity: 1;
@@ -100,9 +107,10 @@
 .header-section {
     position: absolute;
     top: 0%;
-    inset: 0 0 auto 0;
-    padding-block: 7em 1em;
+    inset: -1em 0 0 0;
+    padding-block: 8em 1em;
     opacity: 0;
+    background: linear-gradient(#051036ee, #05103600);
     color: var(--bs-light);
     z-index: 1051;
     transition: opacity .2s, transform .2s;
@@ -117,5 +125,23 @@
         opacity: 1;
         transform: none;
         pointer-events: unset;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .header-main {
+        #navbar-nav-main {
+            position: fixed;
+            inset: auto auto -6em 50%;
+            transform: translateX(-50%);
+            transition: bottom .4s;
+        }
+        #navbar-nav-main > * {
+            flex-grow: 1;
+            text-align: center;
+        }
+        &.mobile-active #navbar-nav-main {
+            bottom: 1em;
+        }
     }
 }
