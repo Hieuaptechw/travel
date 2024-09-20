@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Navbar, Nav,Col } from "react-bootstrap";
 import image from '../../../../assets/images/logo.png';
 import './Header.scss';
@@ -13,26 +13,38 @@ const Header = () => {
 
     const location = useLocation();
 
+    const canRollover = () => {
+        let breakpoint = window.getComputedStyle(document.documentElement).getPropertyValue("--bs-breakpoint-lg");
+        return window.matchMedia(`((hover: hover) and (min-width: ${breakpoint}))`);
+    }
+
     useEffect(() => {
         setActiveNav("");
+        setMobileActive(false);
     }, [location])
 
     const handleNavbarItemRollover = (item) => {
-        console.log(item);
+        console.log(canRollover());
+        if (canRollover().matches) setActiveNav(item);
+    }
+    const handleNavbarItemClick = (e, item) => {
+        e.preventDefault();
+        setMobileActive(!!item);
         setActiveNav(item);
     }
     const handleHeaderMouseExit = () => {
-        console.log("pointer exit");
-        setActiveNav("");
+        if (canRollover().matches) setActiveNav("");
     }
     
     const handleMobileToggleActive = () => {
         setMobileActive(!mobileActive);
+        setActiveNav(!mobileActive ? (activeNav || "explore") : "");
     }
 
     return (
         <header className={
             "header-main p-3 sticky-top"
+            + (activeNav ? " active" : "")
             + (mobileActive ? " mobile-active" : "")
         } onPointerLeave={handleHeaderMouseExit}>
             <Navbar class="d-" expand="lg">
@@ -41,20 +53,51 @@ const Header = () => {
                         <img src={image} alt="Logo" className="logo" />
                     </Link>
                     <Nav id="navbar-nav-main">
-                        <Nav.Link href="#nav-explore" onPointerEnter={() => handleNavbarItemRollover("explore")}>Explore</Nav.Link>
-                        <Nav.Link href="#nav-stay" onPointerEnter={() => handleNavbarItemRollover("stay")}>Stay</Nav.Link>
-                        <Nav.Link href="#nav-transport" onPointerEnter={() => handleNavbarItemRollover("transport")}>Transport</Nav.Link>
-                        <Nav.Link href="#nav-blogs" onPointerEnter={() => handleNavbarItemRollover("blogs")}>Blogs</Nav.Link>
-                        <Nav.Link href="#nav-more" onPointerEnter={() => handleNavbarItemRollover("more")}>More</Nav.Link>
+                        <Nav.Link href="#nav-explore" data-active={activeNav === "explore"}
+                            onPointerEnter={() => handleNavbarItemRollover("explore")} 
+                            onClick={(e) => handleNavbarItemClick(e, "explore")} 
+                        >
+                            <Icon icon="mdi:compass-outline" />
+                            <span>Explore</span>
+                        </Nav.Link>
+                        <Nav.Link href="#nav-stay" data-active={activeNav === "stay"}
+                            onPointerEnter={() => handleNavbarItemRollover("stay")}
+                            onClick={(e) => handleNavbarItemClick(e, "stay")}
+                        >
+                            <Icon icon="ri:road-map-line" />
+                            <span>Stay</span>
+                        </Nav.Link>
+                        <Nav.Link href="#nav-transport" data-active={activeNav === "transport"}
+                            onPointerEnter={() => handleNavbarItemRollover("transport")}
+                            onClick={(e) => handleNavbarItemClick(e, "transport")}
+                        >
+                            <Icon icon="ri:direction-line" />
+                            <span>Transport</span>
+                        </Nav.Link>
+                        <Nav.Link href="#nav-blogs" data-active={activeNav === "blogs"}
+                            onPointerEnter={() => handleNavbarItemRollover("blogs")}
+                            onClick={(e) => handleNavbarItemClick(e, "blogs")}
+                        >
+                            <Icon icon="material-symbols:news-outline" />
+                            <span>Blogs</span>
+                        </Nav.Link>
+                        <Nav.Link href="#nav-more" data-active={activeNav === "more"}
+                            onPointerEnter={() => handleNavbarItemRollover("more")}
+                            onClick={(e) => handleNavbarItemClick(e, "more")}
+                        >
+                            <Icon icon="material-symbols:apps" />
+                            <span>More</span>
+                        </Nav.Link>
                     </Nav>
-                    <div className="flex-fill" />
+                    <button className="btn mobile-menu-btn" onClick={handleMobileToggleActive}>
+                        <Icon icon={activeNav ? "line-md:menu-to-close-alt-transition" : "line-md:close-to-menu-alt-transition"} 
+                            />
+                    </button>
+                    <div className="navbar-space flex-fill" onPointerEnter={handleHeaderMouseExit}>&nbsp;</div>
                     <Nav id="navbar-nav-user">
                         <Link to="/login" className="nav-link">Log in</Link>
                         <Link to="/signup" className="nav-link sign-up-button">Sign up</Link>
                     </Nav>
-                    <button className="btn mobile-menu-button" onClick={handleMobileToggleActive}>
-                        <Icon icon="bi:menu" />
-                    </button>
                 </Container>
             </Navbar>
             <div id="nav-bg" className={
@@ -73,7 +116,7 @@ const Header = () => {
                         </div>
                         <div className="col-12 col-lg-9">
                             <div className="row g-2">
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/tours">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -82,7 +125,7 @@ const Header = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/locations">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -108,7 +151,7 @@ const Header = () => {
                         </div>
                         <div className="col-12 col-lg-9">
                             <div className="row g-2">
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/hotels">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -117,7 +160,7 @@ const Header = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/rentals">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -126,7 +169,7 @@ const Header = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cruises">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -152,7 +195,7 @@ const Header = () => {
                         </div>
                         <div className="col-12 col-lg-9">
                             <div className="row g-2">
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/flights">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -161,7 +204,7 @@ const Header = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/trains">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -170,7 +213,7 @@ const Header = () => {
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-4">
+                                <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
                                         <img className="card-img-top" src="//placehold.co/400x240" />
                                         <div class="card-body">
@@ -190,64 +233,50 @@ const Header = () => {
             }>
                 <Container className="p-4">
                     <div class="row align-items-stretch">
-                        <div className="col-12 col-lg-3 d-flex flex-column justify-content-center">
+                        <div className="col-12 col-lg-3 mb-4 mb-lg-0 d-flex flex-column justify-content-center">
                             <h2>Blogs</h2>
                             <p>Stories to tell</p>
+                            <Link className="btn btn-outline-light d-flex-center" to="/blogs">
+                                View all blog posts
+                                <Icon icon="radix-icons:arrow-top-right" inline class="fs-4 ms-1" />
+                            </Link>
                         </div>
                         <div className="col-12 col-lg-9">
                             <div className="row g-2">
                                 <h3>Latest stories</h3>
-                                <div className="col-12 col-lg-6">
+                                <div className="col-12 col-md-6">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
                                         <img className="card-img-top" src="//placehold.co/400x40" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
+                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-6">
+                                <div className="col-12 col-md-6">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
                                         <img className="card-img-top" src="//placehold.co/400x40" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
+                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-6">
+                                <div className="col-12 col-md-6">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
                                         <img className="card-img-top" src="//placehold.co/400x40" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
+                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-lg-6">
+                                <div className="col-12 col-md-6">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
                                         <img className="card-img-top" src="//placehold.co/400x40" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className="col-12 col-lg-6">
-                                    <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
-                                        <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
-                                        </div>
-                                    </Link>
-                                </div>
-                                <div className="col-12 col-lg-6">
-                                    <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
-                                        <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this</p>
+                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>

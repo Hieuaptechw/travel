@@ -3,6 +3,10 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins/breakpoints";
 
+.-checkout-course {
+    box-shadow: 0 0.5em 1em #0004;
+}
+
 .-checkout-tab:not(.active) {
     display: none;
 }
