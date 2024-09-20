@@ -18,6 +18,8 @@ import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 import AddTour from './pages/admin/tour/AddTour';
 import AddCar from './pages/admin/car/AddCar';
+import Tour from './pages/admin/tour/Tour';
+import Car from './pages/admin/car/Car';
 
 const routes = [
   {
@@ -41,8 +43,18 @@ const routes = [
     layout: MasterLayoutAdmin,
   },
   {
+    path: ROUTERS.ADMIN.TOURS,
+    component: <Tour />,
+    layout: MasterLayoutAdmin,
+  },
+  {
     path: ROUTERS.ADMIN.ADDTOUR,
     component: <AddTour />,
+    layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.ADMIN.CARS,
+    component: <Car />,
     layout: MasterLayoutAdmin,
   },
   {
