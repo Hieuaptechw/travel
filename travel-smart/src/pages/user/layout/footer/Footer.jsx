@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, ListGroup } from 'react-bootstrap';
 import './Footer.scss';
 
 const Footer = () => {
@@ -76,23 +76,44 @@ const Footer = () => {
               </ul>
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <div className='footer__below d-flex align-items-center justify-content-between flex-wrap'>
-                <ul className='footer__below_link d-flex align-items-center'>
-                  <li><p>&copy; 2024 by c2309g &nbsp; All rights reserved.</p></li>
-                  <li><a href='#'>Privacy</a></li>
-                  <li><a href='#'>Terms</a></li>
-                  <li><a href='#'>Site Map</a></li>
-                </ul>
-                <ul className='footer__below_link d-flex align-items-center'>
-                  <li><i className="bi bi-globe-americas"></i><a href='#'>English (US)</a></li>
-                  <li><a href='#'><i className="bi bi-facebook"></i></a></li>
-                  <li><a href='#'><i className="bi bi-twitter"></i></a></li>
-                  <li><a href='#'><i className="bi bi-instagram"></i></a></li>
-                  <li><a href='#'><i className="bi bi-pinterest"></i></a></li>
-                </ul>
-              </div>
+        </Container>
+        <Container fluid="md" className="footer__below">
+          <Row className="align-items-center">
+            <Col xs={12} md={6}>
+              <ListGroup horizontal className="footer__below_link d-flex align-items-center justify-content-start">
+                <ListGroup.Item className="border-0 p-0">
+                  <p>&copy; 2024 by c2309g &nbsp; All rights reserved.</p>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'>Privacy</a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'>Terms</a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'>Site Map</a>
+                </ListGroup.Item>
+              </ListGroup>
+            </Col>
+            <Col xs={12} md={6}>
+              <ListGroup horizontal className="footer__below_link d-flex align-items-center justify-content-end">
+                <ListGroup.Item className="border-0 p-0">
+                  <i className="bi bi-globe-americas"></i>
+                  <a href='#'>English (US)</a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'><i className="bi bi-facebook"></i></a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'><i className="bi bi-twitter"></i></a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'><i className="bi bi-instagram"></i></a>
+                </ListGroup.Item>
+                <ListGroup.Item className="border-0 p-0">
+                  <a href='#'><i className="bi bi-pinterest"></i></a>
+                </ListGroup.Item>
+              </ListGroup>
             </Col>
           </Row>
         </Container>

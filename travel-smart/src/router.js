@@ -12,7 +12,7 @@ import HotelPage from "./pages/user/hotel/HotelPage";
 import About from "./pages/user/about/About";
 import LoginPage from "./pages/user/login";
 import SignUpPage from "./pages/user/Signup";
-import DestinationPage from "./pages/user/destinations";
+import DestinationPage from './pages/user/destinations';
 import BlogPage from './pages/user/blogs/blog';
 import BlogSinglePage from './pages/user/blogs/blogsingle';
 import TourPage from "./pages/user/tour/TourPage";

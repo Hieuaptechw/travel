@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./signup.css";
+import "./singup.css";
 import Form from 'react-bootstrap/Form';
 import { FaFacebookF, FaGoogle, FaUnderline } from 'react-icons/fa'; // Import icons
 import { Container, Row, Col, Card, Button, Tab, Nav } from 'react-bootstrap';
@@ -18,12 +18,12 @@ const LoginPage = () => {
                     <p>Already have an account? <a className="login-link" href="#">Log in</a></p>
                 </div>
                 <Form.Group className="mb-4" controlId="formBasicEmail">
-                    <Form.Label>Email</Form.Label>
-                    <Form.Control className="input-field" type="email" placeholder="Enter your email" />
+                  
+                    <Form.Control className="input-field" type="email" placeholder="Email" />
                 </Form.Group>
                 <Form.Group className="mb-4" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control className="input-field" type="password" placeholder="Enter your password" />
+                 
+                    <Form.Control className="input-field" type="password" placeholder="Password" />
                 </Form.Group>
                 <Button className="submit-btn" variant="primary" type="submit">
                     Sign In

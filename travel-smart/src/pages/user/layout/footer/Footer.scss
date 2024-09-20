@@ -23,7 +23,7 @@
             .footer__top_input {
                 width: 280px;
                 border-radius: 8px 0 0 8px;
-                padding: 10px;
+                padding: 21px;
                 border: none;
                 outline: none;
 
@@ -37,7 +37,7 @@
 
             .footer__top_btn {
                 width: 120px;
-                padding: 10px; 
+                padding: 25px; 
                 border: none;
                 border-radius: 0 8px 8px 0;
                 color: white;
@@ -84,25 +84,54 @@
     }
 
     .footer__below {
-        padding-top: 30px;
-
+        
+        padding: 20px 0;
+       
+      
         .footer__below_link {
-            display: flex; 
-            align-items: center;
-
-            a, p {
-                margin: 0;
-                color: #0d2857;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start; 
+          flex-wrap: wrap; 
+          padding: 10px 0;
+      
+          a, p {
+            color: #0d2857;
+            margin: 0 15px 0 0;
+            font-size: 14px;
+            white-space: nowrap; 
+          }
+      
+          p {
+            margin-right: 15px;
+          }
+      
+          a {
+            text-decoration: none;
+      
+            &:hover {
+              text-decoration: underline;
             }
-
-            li {
-                margin: 0 10px;
-            }
-
-            i {
-                margin: 0 3px;
-                color: #0d2857; 
-            }
+          }
+      
+          i {
+            color: #0d2857;
+            margin-right: 5px;
+          }
         }
-    }
+      
+   
+        @media (max-width: 768px) {
+          .footer__below_link {
+            justify-content: center; 
+            flex-wrap: wrap; 
+            
+            a, p {
+              margin: 5px 10px; 
+              text-align: center;
+            }
+          }
+        }
+      }
+      
 }
