@@ -20,6 +20,9 @@ import AddTour from './pages/admin/tour/AddTour';
 import AddCar from './pages/admin/car/AddCar';
 import Tour from './pages/admin/tour/Tour';
 import Car from './pages/admin/car/Car';
+import HotelSingPage from './pages/user/hotel/HotelSinglePage';
+import TourSingle from './pages/user/tour/TourSingle';
+import CarSingle from './pages/user/car/CarSingle';
 
 const routes = [
   {
@@ -68,8 +71,18 @@ const routes = [
     layout: MasterLayout,
   },
   {
+    path: ROUTERS.USER.HOTELSINGLE,
+    component: <HotelSingPage/>,
+    layout: MasterLayout,
+  },
+  {
     path: ROUTERS.USER.TOURS,
     component: <TourPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.TOURSINGLE,
+    component: <TourSingle />,
     layout: MasterLayout,
   },
   {
@@ -78,6 +91,11 @@ const routes = [
     layout: MasterLayout,
   },
 
+  {
+    path: ROUTERS.USER.CARSINGLE,
+    component: <CarSingle />,
+    layout: MasterLayout,
+  },
   {
     path: ROUTERS.USER.ABOUT,
     component: <About />,

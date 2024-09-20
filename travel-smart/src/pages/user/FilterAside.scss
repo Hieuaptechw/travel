@@ -10,10 +10,11 @@
         inset: 0;
         background: var(--bs-body-bg);
         padding: 2em;
+        margin: 0;
         overflow: auto;
         transform: translateX(-100%);
         transition: box-shadow 0.4s, transform 0.4s;
-        z-index: 100;
+        z-index: 1053;
         &.show {
             box-shadow: var(--bs-box-shadow);
             transform: translateX(0);
