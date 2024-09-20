@@ -1,0 +1,114 @@
+.title {
+    margin-bottom: 2rem;
+}
+
+.blogs__title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.blogs__titlesub {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.navbar__blogs_categories { 
+    padding-bottom: 18px;
+}
+
+.navbar__blogs {
+    h4 {
+        padding-bottom: 30px;
+    }
+
+    .navbar__blogs_top {
+        .search-container {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+
+            .search-input {
+                border: none;
+                padding: 0.5rem;
+                flex: 1;
+                outline: none;
+            }
+
+            .search-icon {
+                font-size: 1.25rem;
+                padding: 0.5rem;
+            }
+            h4{
+                font-size: 18px;
+            }
+        }
+    }
+    .navbar__blogs_main h4{
+        font-size: 18px;
+    }
+    .navbar__blogs_main {
+        margin-bottom: 2rem;
+    }
+
+    .navbar__blogs_categories {
+        font-size: 0.875rem;
+    }
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; // Thêm chuyển động cho hover
+}
+
+.card-img:hover {
+    transform: scale(1.05); // Phóng to ảnh khi hover
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Thêm bóng đổ cho ảnh khi hover
+}
+
+.custom-pagination {
+    display: flex; /* Sử dụng flexbox để phân phối đều */
+    justify-content: center; /* Căn giữa các phần tử */
+    border-radius: 50px; /* Bo tròn border cho toàn bộ Pagination */
+    overflow: hidden; /* Để tránh phần tử con tràn ra ngoài */
+    
+    .page-item {
+        border-radius: 50px; /* Bo tròn cho từng phần tử */
+        margin: 0 5px; /* Khoảng cách giữa các phần tử */
+
+        &.active {
+            background-color: #0d2857; /* Màu nền cho phần tử đang hoạt động */
+            color: white; /* Màu chữ cho phần tử đang hoạt động */
+        }
+
+        &.disabled {
+            color: #b0b0b0; /* Màu chữ cho phần tử bị vô hiệu hóa */
+        }
+    }
+
+    .page-link {
+        border-radius: 50px; /* Bo tròn cho các liên kết */
+        padding: 10px 15px; /* Điều chỉnh padding cho các liên kết */
+        transition: background-color 0.3s; /* Hiệu ứng chuyển màu nền */
+
+        &:hover {
+            background-color: rgba(53, 84, 209, 0.2); /* Màu nền khi hover */
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .blogs__title {
+        font-size: 1.5rem;
+    }
+
+    .blogs__titlesub {
+        font-size: 0.875rem;
+    }
+}

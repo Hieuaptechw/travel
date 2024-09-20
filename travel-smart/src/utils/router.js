@@ -9,6 +9,7 @@ export const ROUTERS = {
         SIGNUP: "/signup",
         DESTINATION: "/destination",
         BLOG: "/blogs",
+        BLOGSINGLE: "/blogs/blogsingle",
         HOTELS:"/hotels",
         HOTELSINGLE:"/hotels/1",
         TOURS:"/tours",
@@ -18,7 +19,9 @@ export const ROUTERS = {
         ABOUT: "/about",
         CHECKOUT: "/checkout",
         SETTING:"/setting",
-        WISHLIST:"/setting/wishlist"
+        WISHLIST:"/setting/wishlist",
+        ERROR: "/oops",
+        FLIGHT: "/flight"
     },
     ADMIN:{
         HOME:"/admin/dashboard",

@@ -27,6 +27,14 @@ import BookingAd from './pages/admin/booking/bookingad';
 import Setting from './pages/user/setting/Setting';
 import Recovery from './pages/admin/hotel/Recovery';
 import Wishlist from './pages/user/setting/Wishlist';
+import DestinationPage from './pages/user/destinations';
+import BlogPage from './pages/user/blogs/blog';
+import BlogSinglePage from './pages/user/blogs/blogsingle';
+import TourPage from "./pages/user/tour/TourPage";
+import CarPage from "./pages/user/car/CarPage";
+import CheckoutPage from "./pages/user/checkout/CheckoutPage";
+import ErrorPage from './pages/user/404/Error';
+import FlightPage from './pages/user/flight/flight';
 
 const routes = [
   {
@@ -145,6 +153,24 @@ const routes = [
     path: ROUTERS.USER.WISHLIST,
     component: <Wishlist />,
     layout: MasterLayoutAdmin,
+    path: ROUTERS.USER.BLOG,
+    component: <BlogPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.BLOGSINGLE,
+    component: <BlogSinglePage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.ERROR,
+    component: <ErrorPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.FLIGHT,
+    component: <FlightPage />,
+    layout: MasterLayout,
   },
 
 
