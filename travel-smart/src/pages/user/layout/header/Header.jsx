@@ -118,7 +118,7 @@ const Header = () => {
                             <div className="row g-2">
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/tours">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/tour.jpg" />
                                         <div class="card-body">
                                             <h5 class="card-title">Tours</h5>
                                             <p class="card-subtitle mb-0 opacity-75">The more, the merrier</p>
@@ -127,7 +127,7 @@ const Header = () => {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/locations">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/landmarks.jpg" />
                                         <div class="card-body">
                                             <h5 class="card-title">Landmarks</h5>
                                             <p class="card-subtitle mb-0 opacity-75">Go to amazing new places</p>
@@ -153,7 +153,7 @@ const Header = () => {
                             <div className="row g-2">
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/hotels">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Hotel/Paris.jpg" />
                                         <div class="card-body">
                                             <h5 class="card-title">Hotels</h5>
                                             <p class="card-subtitle mb-0 opacity-75">Find a cozy room</p>
@@ -162,7 +162,7 @@ const Header = () => {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/rentals">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/rentals.jpg " />
                                         <div class="card-body">
                                             <h5 class="card-title">Rentals</h5>
                                             <p class="card-subtitle mb-0 opacity-75">Affordable temporary houses</p>
@@ -171,7 +171,7 @@ const Header = () => {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cruises">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://ik.imagekit.io/tvlk/xpe-asset/AyJ40ZAo1DOyPyKLZ9c3RGQHTP2oT4ZXW+QmPVVkFQiXFSv42UaHGzSmaSzQ8DO5QIbWPZuF+VkYVRk6gh-Vg4ECbfuQRQ4pHjWJ5Rmbtkk=/6897813827256/-Route-2-2D1N-Halong-Bay-by-Alisa-Premier-Luxury-5-Stars-Cruise-680d19e6-2ff0-4836-91f6-9da51ac47684.jpeg?tr=q-60,c-at_max,w-1280,h-720&_src=imagekit" />
                                         <div class="card-body">
                                             <h5 class="card-title">Cruises</h5>
                                             <p class="card-subtitle mb-0 opacity-75">Luxury mobile homes</p>
@@ -197,7 +197,7 @@ const Header = () => {
                             <div className="row g-2">
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/flights">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://afar.brightspotcdn.com/dims4/default/3f96d36/2147483647/strip/true/crop/2441x1627+62+0/resize/900x600!/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2F10%2F8c%2F4c8621923b7e191eb2c232bca3fd%2Foriginal-shutterstock-345664409.jpg" />
                                         <div class="card-body">
                                             <h5 class="card-title">Flights</h5>
                                             <p class="card-subtitle mb-0 opacity-75">The sky is the limit</p>
@@ -206,7 +206,7 @@ const Header = () => {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/trains">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://www.hsrail.org/wp-content/uploads/2024/05/Frecciarossa_South_of_Milan_Harnish_900x600.jpg" />
                                         <div class="card-body">
                                             <h5 class="card-title">Trains</h5>
                                             <p class="card-subtitle mb-0 opacity-75">All aboard for all</p>
@@ -215,9 +215,9 @@ const Header = () => {
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x240" />
+                                        <img className="card-img-top" src="https://mezha.media/wp-content/uploads/2024/09/DS-SM-Tribute-900x600.jpg" />
                                         <div class="card-body">
-                                            <h5 class="card-title">Car rentals</h5>
+                                            <h5 class="card-title">Car</h5>
                                             <p class="card-subtitle mb-0 opacity-75">Affordable transportation</p>
                                         </div>
                                     </Link>
@@ -244,42 +244,34 @@ const Header = () => {
                         <div className="col-12 col-lg-9">
                             <div className="row g-2">
                                 <h3>Latest stories</h3>
-                                <div className="col-12 col-md-6">
+                                <div className="col-12 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/7.png" />
                                         <div class="card-body px-3 py-2">
                                             <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
                                             <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-md-6">
+                                <div className="col-12 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/6.png" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <h5 class="card-title">TWhere can I go? 5 amazing countries that are open right now</h5>
                                             <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-md-6">
+                                <div className="col-12 col-md-4">
                                     <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
+                                        <img className="card-img-top" src="https://img.hieuaptech.com/Banner/5.png" />
                                         <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
+                                            <h5 class="card-title">Booking travel during Corona: good advice in an uncertain time</h5>
                                             <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
                                         </div>
                                     </Link>
                                 </div>
-                                <div className="col-12 col-md-6">
-                                    <Link className="card h-100 text-decoration-none" to="/cars">
-                                        <img className="card-img-top" src="//placehold.co/400x40" />
-                                        <div class="card-body px-3 py-2">
-                                            <h5 class="card-title">Top 10 locations in France to go to this holiday season</h5>
-                                            <p class="card-subtitle mb-0 opacity-75">You should not miss this, deals are included</p>
-                                        </div>
-                                    </Link>
-                                </div>
+                
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,3 @@
-import Wishlist from "../pages/user/setting/Wishlist";
-
 export const ROUTERS = {
 
     USER: {

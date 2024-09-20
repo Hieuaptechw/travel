@@ -29,7 +29,7 @@ $box-shadow-hover: translateY(-5px);
     height: $popular-img-height;
 }
 .custom-card {
-    background-image: url('../../../assets/images/Barcelona.jpg');
+   
     position: relative;
     background-size: cover;
     background-position: center;
@@ -54,7 +54,9 @@ $box-shadow-hover: translateY(-5px);
         align-items: center;
         text-align: center;
         padding: 20px;
-
+        h2{
+            font-weight: 700;
+        }
         h2,
         h3 {
             color: white;
@@ -76,8 +78,14 @@ $box-shadow-hover: translateY(-5px);
         }
     }
 }
+.item1{
+    background-image: url('https://assets.voxcity.com/uploads/blog_images/Iconic%20Landmarks%20in%20Rome_original.jpg');
+}
+.item2{
+    background-image: url('https://i0.wp.com/zestinatote.com/wp-content/uploads/2023/12/vietnam-ban-gioc-falls.jpg?resize=730%2C477&ssl=1');
+}
 
-// Select styles
+
 .select {
     width: 22%;
     height: 60px;
@@ -85,7 +93,7 @@ $box-shadow-hover: translateY(-5px);
     border-radius: 10px;
 }
 
-// Hotel cards
+
 .hotel-card {
     box-shadow: 0 4px 8px $hotel-card-shadow;
     transition: transform 0.3s ease;
@@ -109,11 +117,11 @@ $box-shadow-hover: translateY(-5px);
     }
 
     .rating-btn {
-        background-color: $rating-bg-color;
+        background-color: #3554d1;
         border: none;
         font-size: 1rem;
         padding: 0.3rem 0.8rem;
-        border-radius: 50px;
+        border-radius: 5px;
         margin-right: 10px;
     }
 
@@ -133,7 +141,7 @@ $box-shadow-hover: translateY(-5px);
         font-size: 1.1rem;
         color: #333;
         margin-top: 10px;
-
+        font-weight: 500;
         strong {
             color: $text-primary-color;
         }

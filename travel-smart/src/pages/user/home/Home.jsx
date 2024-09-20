@@ -69,10 +69,7 @@ const Home = () => {
     <>
       <section class="hero-section">
         <img src={bg} alt="Background Image" class="hero-image" />
-        <div class="hero-text">
-          <h1>Find Next Place To Visit</h1>
-          <p>Discover amazing places at exclusive deals</p>
-        </div>
+     
       </section>
 
       <section>
@@ -101,7 +98,6 @@ const Home = () => {
         <Card.Body>
           <Card.Title>{hotel.name}</Card.Title>
           <Card.Text>{hotel.address}</Card.Text>
-          <Button variant="primary">Discover</Button>
         </Card.Body>
       </Card>
     </div>
@@ -113,7 +109,7 @@ const Home = () => {
           {/* Discount */}
           <Row className="my-5">
             <Col md={6}>
-              <div className="custom-card">
+              <div className="custom-card item1">
                 <div className="overlay">
                   <h2>Things To Do On Your Trip</h2>
                   <Button variant="light" className="btn-overlay">
@@ -123,7 +119,7 @@ const Home = () => {
               </div>
             </Col>
             <Col md={6}>
-              <div className="custom-card">
+              <div className="custom-card item2">
                 <div className="overlay">
                   <h2>Enjoy Summer Deals</h2>
                   <h3>Up to 70% Discount!</h3>
@@ -148,7 +144,7 @@ const Home = () => {
             </Col>
           </Row>
           <Row>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
               <Card className="mb-4 hotel-card">
                 <Card.Img
                   variant="top"
@@ -179,7 +175,7 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
               <Card className="mb-4 hotel-card">
                 <Card.Img
                   variant="top"
@@ -210,7 +206,38 @@ const Home = () => {
                 </Card.Body>
               </Card>
             </Col>
-            <Col xs={12} md={4}>
+            <Col xs={12} md={3}>
+              <Card className="mb-4 hotel-card">
+                <Card.Img
+                  variant="top"
+                  src={NewYorkImage}
+                  className="popular-img"
+                />
+                <Card.Body>
+                  <Card.Title className="hotel-title">
+                    The Montcalm At Brewery London City
+                  </Card.Title>
+                  <Card.Text className="hotel-location">
+                    Westminster Borough, London
+                  </Card.Text>
+                  <Row className="rating-row mb-2">
+                    <Col xs="auto" className="d-flex align-items-center">
+                      <Button variant="primary" className="rating-btn">
+                        4.7
+                      </Button>
+                    </Col>
+                    <Col className="d-flex flex-row align-items-center">
+                      <p className="rating-text mb-0">Exceptional</p>
+                      <p className="reviews-text mb-0">3014 reviews</p>
+                    </Col>
+                  </Row>
+                  <Card.Text className="price-text">
+                    Starting from <strong>US$72</strong>
+                  </Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col xs={12} md={3}>
               <Card className="mb-4 hotel-card">
                 <Card.Img
                   variant="top"
