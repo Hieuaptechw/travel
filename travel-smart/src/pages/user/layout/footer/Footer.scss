@@ -1,0 +1,108 @@
+.footer__top {
+    background-color: #0d2857;
+
+    .footer__top_contents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 0;
+
+        @media (max-width: 768px) {
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+
+        .footer__top_title {
+            color: white;
+        }
+
+        .footer__top_subscribe {
+            display: flex; 
+            align-items: center;
+
+            .footer__top_input {
+                width: 280px;
+                border-radius: 8px 0 0 8px;
+                padding: 10px;
+                border: none;
+                outline: none;
+
+                @media (max-width: 768px) {
+                    width: 100%; 
+                    margin: 30px 0; 
+                    padding: 8px; 
+                    height: 35px; 
+                }
+            }
+
+            .footer__top_btn {
+                width: 120px;
+                padding: 10px; 
+                border: none;
+                border-radius: 0 8px 8px 0;
+                color: white;
+                background-color: #3554d1;
+
+                @media (max-width: 768px) {
+                    width: 100%; 
+                    padding: 5px; 
+                    height: 35px; 
+                }
+            }
+        }
+    }
+}
+
+.footer__main {
+    padding: 50px 0;
+    h4{
+        font-size: 19px;
+        font-weight: 600;
+    }
+    ul {
+        padding: 0;
+        list-style: none;
+
+        li {
+            text-align: left;
+            padding: 12px 0;
+            a{
+                color: #0d2857;
+                font-size: 15px;
+            }
+            div a {
+                font-size: 23px;
+                font-weight: 600;
+                color: #0d2857; 
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .footer__below {
+        padding: 30px 0;
+
+        .footer__below_link {
+            display: flex; 
+            align-items: center;
+
+            a, p {
+                margin: 0;
+                color: #0d2857;
+            }
+
+            li {
+                margin: 0 10px;
+            }
+
+            i {
+                margin: 0 3px;
+                color: #0d2857; 
+            }
+        }
+    }
+}

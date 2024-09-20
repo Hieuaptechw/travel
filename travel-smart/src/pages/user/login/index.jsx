@@ -10,8 +10,8 @@ const LoginPage = () => {
   return (
     <div className="login">
     <Container fluid="lg">
-    <Row className="justify-content-center">
-        <Col md={8} lg={6}>
+    <Row className="justify-content-center p-5">
+        <Col md={8} lg={6} >
             <Form className="login-form">
                 <div className="form-header">
                     <h2>Welcome back</h2>

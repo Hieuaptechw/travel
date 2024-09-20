@@ -14,6 +14,7 @@ import LoginPage from "./pages/user/login";
 import SignUpPage from "./pages/user/Signup";
 import DestinationPage from "./pages/user/destinations";
 import BlogPage from './pages/user/blogs/blog';
+import BlogSinglePage from './pages/user/blogs/blogsingle';
 import TourPage from "./pages/user/tour/TourPage";
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
@@ -82,6 +83,11 @@ const routes = [
   {
     path: ROUTERS.USER.BLOG,
     component: <BlogPage />,
+    layout: MasterLayout,
+  },
+  {
+    path: ROUTERS.USER.BLOGSINGLE,
+    component: <BlogSinglePage />,
     layout: MasterLayout,
   },
 
