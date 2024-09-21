@@ -22,6 +22,7 @@ import TripPlanner from "../../../components/user/common/TripPlanner";
 const Home = () => {
   const settings = {
     dots: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4,
@@ -78,42 +79,39 @@ const Home = () => {
       </section>
 
       <section>
-        <Container>
+        <Container class="overflow-hidden px-3">
           {/* Popular */}
           <Row className="my-5">
-            <Col>
+            <Col xs={12} md={6}>
               <h1>Popular Destinations</h1>
               <p>These popular destinations have a lot to offer</p>
             </Col>
-            <Col className="d-flex justify-content-end align-items-center">
+            <Col xs={12} md={6} className="d-flex justify-content-end align-items-center">
               <button className="view-all">View All Destinations</button>
             </Col>
           </Row>
-
-          <Row>
-          <Slider {...settings}>
-  {Object.values(hotels).map((hotel) => (
-    <div key={hotel.id}>
-      <Card className="mb-4 slider-card">
-        <Card.Img
-          variant="top"
-          src={hotel.images && hotel.images.length > 0 ? hotel.images[0].image_url : 'default-image-url.jpg'}
-          className="popular-img"
-        />
-        <Card.Body>
-          <Card.Title>{hotel.name}</Card.Title>
-          <Card.Text>{hotel.address}</Card.Text>
-        </Card.Body>
-      </Card>
-    </div>
-  ))}
-</Slider>
-
-          </Row>
+    
+            <Slider {...settings}>
+              {Object.values(hotels).map((hotel) => (
+                <div key={hotel.id}>
+                  <Card className="mb-4 slider-card">
+                    <Card.Img
+                      variant="top"
+                      src={hotel.images && hotel.images.length > 0 ? hotel.images[0].image_url : 'default-image-url.jpg'}
+                      className="popular-img"
+                    />
+                    <Card.Body>
+                      <Card.Title>{hotel.name}</Card.Title>
+                      <Card.Text>{hotel.address}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </div>
+              ))}
+            </Slider>
 
           {/* Discount */}
           <Row className="my-5">
-            <Col md={6}>
+            <Col xs={12} lg={6}>
               <div className="custom-card item1">
                 <div className="overlay">
                   <h2>Things To Do On Your Trip</h2>
@@ -123,7 +121,7 @@ const Home = () => {
                 </div>
               </div>
             </Col>
-            <Col md={6}>
+            <Col xs={12} lg={6}>
               <div className="custom-card item2">
                 <div className="overlay">
                   <h2>Enjoy Summer Deals</h2>
@@ -138,19 +136,19 @@ const Home = () => {
 
           {/* Recommend */}
           <Row className="my-5">
-            <Col>
+            <Col xs={12} lg={6}>
               <h1>Recommended</h1>
               <p>Interdum et malesuada fames ac ante ipsum</p>
             </Col>
-            <Col className="d-flex justify-content-end align-items-center">
+            <Col xs={12} lg={6} className="d-flex justify-content-end align-items-center">
               <select className="select">
                 <option value="Hotel">Hotel</option>
               </select>
             </Col>
           </Row>
-          <Row>
-            <Col xs={12} md={3}>
-              <Card className="mb-4 hotel-card">
+          <Slider {...settings}>
+            {[...new Array(4)].map((x) => (
+              <Card className="mb-4 slider-card hotel-card">
                 <Card.Img
                   variant="top"
                   src={NewYorkImage}
@@ -179,104 +177,10 @@ const Home = () => {
                   </Card.Text>
                 </Card.Body>
               </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className="mb-4 hotel-card">
-                <Card.Img
-                  variant="top"
-                  src={NewYorkImage}
-                  className="popular-img"
-                />
-                <Card.Body>
-                  <Card.Title className="hotel-title">
-                    The Montcalm At Brewery London City
-                  </Card.Title>
-                  <Card.Text className="hotel-location">
-                    Westminster Borough, London
-                  </Card.Text>
-                  <Row className="rating-row mb-2">
-                    <Col xs="auto" className="d-flex align-items-center">
-                      <Button variant="primary" className="rating-btn">
-                        4.7
-                      </Button>
-                    </Col>
-                    <Col className="d-flex flex-row align-items-center">
-                      <p className="rating-text mb-0">Exceptional</p>
-                      <p className="reviews-text mb-0">3014 reviews</p>
-                    </Col>
-                  </Row>
-                  <Card.Text className="price-text">
-                    Starting from <strong>US$72</strong>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className="mb-4 hotel-card">
-                <Card.Img
-                  variant="top"
-                  src={NewYorkImage}
-                  className="popular-img"
-                />
-                <Card.Body>
-                  <Card.Title className="hotel-title">
-                    The Montcalm At Brewery London City
-                  </Card.Title>
-                  <Card.Text className="hotel-location">
-                    Westminster Borough, London
-                  </Card.Text>
-                  <Row className="rating-row mb-2">
-                    <Col xs="auto" className="d-flex align-items-center">
-                      <Button variant="primary" className="rating-btn">
-                        4.7
-                      </Button>
-                    </Col>
-                    <Col className="d-flex flex-row align-items-center">
-                      <p className="rating-text mb-0">Exceptional</p>
-                      <p className="reviews-text mb-0">3014 reviews</p>
-                    </Col>
-                  </Row>
-                  <Card.Text className="price-text">
-                    Starting from <strong>US$72</strong>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-            <Col xs={12} md={3}>
-              <Card className="mb-4 hotel-card">
-                <Card.Img
-                  variant="top"
-                  src={NewYorkImage}
-                  className="popular-img"
-                />
-                <Card.Body>
-                  <Card.Title className="hotel-title">
-                    The Montcalm At Brewery London City
-                  </Card.Title>
-                  <Card.Text className="hotel-location">
-                    Westminster Borough, London
-                  </Card.Text>
-                  <Row className="rating-row mb-2">
-                    <Col xs="auto" className="d-flex align-items-center">
-                      <Button variant="primary" className="rating-btn">
-                        4.7
-                      </Button>
-                    </Col>
-                    <Col className="d-flex flex-row align-items-center">
-                      <p className="rating-text mb-0">Exceptional</p>
-                      <p className="reviews-text mb-0">3014 reviews</p>
-                    </Col>
-                  </Row>
-                  <Card.Text className="price-text">
-                    Starting from <strong>US$72</strong>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          {/* Best  */}
-          <Row>
-            <Col>
+            ))}
+          </Slider>
+          <Row className="my-4 pt-5">
+            <Col xs={12} lg={4}>
               <div className="d-flex justify-content-center">
                 <img src={icon1}></img>
               </div>
@@ -287,7 +191,7 @@ const Home = () => {
                 </p>
               </div>
             </Col>
-            <Col>
+            <Col xs={12} lg={4}>
               <div className="d-flex justify-content-center">
                 <img src={icon2}></img>
               </div>
@@ -298,7 +202,7 @@ const Home = () => {
                 </p>
               </div>
             </Col>
-            <Col>
+            <Col xs={12} lg={4}>
               <div className="d-flex justify-content-center">
                 <img src={icon3}></img>
               </div>
@@ -316,7 +220,7 @@ const Home = () => {
         {/* Top comment */}
         <Container className="comment">
           <Row>
-            <Col>
+            <Col xs={12} lg={6}>
               <h2>What our customers are saying us?</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -343,7 +247,7 @@ const Home = () => {
                 </Col>
               </Row>
             </Col>
-            <Col>
+            <Col xs={12} lg={6}>
               <div className="d-flex align-items-center person-container">
                 <img
                   src={NewYorkImage}

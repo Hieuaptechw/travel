@@ -11,7 +11,6 @@ const PageControl = () => {
                 <li class="page-item active"><button class="btn">1</button></li>
                 <li class="page-item"><button class="btn">2</button></li>
                 <li class="page-item"><button class="btn">3</button></li>
-                <li class="page-item"><button class="btn">4</button></li>
                 <div class="d-flex-center"><Icon icon="ic:baseline-more-horiz" /></div>
                 <li class="page-item"><button class="btn">103</button></li>
                 <div />
