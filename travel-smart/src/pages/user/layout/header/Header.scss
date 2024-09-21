@@ -16,7 +16,7 @@
         height: 5em;
         z-index: 1052;
 
-        .navbar-brand, .mobile-menu-btn {
+        .navbar-brand, .mobile-menu-btn, #profile-btn {
             background-color: var(--bs-body-bg);
             box-shadow: 0 0.5em 1em #0004;
             width: 3.5em;
@@ -28,7 +28,7 @@
                 position: absolute;
                 left: 50%;
                 top: 50%;
-                transform: translate(-48%, -50%);
+                transform: translate(-50%, -50%);
                 height: 1em;
                 font-size: 2.5em;
             }
@@ -86,7 +86,6 @@
             height: 3.5em;
         }
 
-
         .sign-up-button {
             background: var(--bs-primary);
             color: var(--bs-light);
@@ -94,33 +93,37 @@
             padding-inline: 1.5em 1.75em !important;
             margin-inline: 0.5em -1em;
         }
-    }
 
-    // Button styling
-    button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 25px;
-        font-size: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: background-color 0.3s ease;
-        cursor: pointer;
-
-        &:hover {
-            background-color: #0056b3;
+        #profile-btn {
+            display: block;
+            --bs-btn-active-bg: var(--bs-body-bg);
+            width: 4.5em;
+            height: 4.5em;
+            margin-inline-start: 1em;
+    
+            > * {
+                font-size: 2em;
+            }
         }
-    }
-
-    button+button {
-        margin-left: 10px;
     }
 
     .mobile-menu-btn {
         display: none;
         color: var(--bs-body-color);
+    }
+
+    .header-category {
+        img {
+            max-height: 10em;
+            object-fit: cover;
+        }
+    }
+
+    .header-blog {
+        img {
+            max-height: 4em;
+            object-fit: cover;
+        }
     }
 }
 
@@ -130,8 +133,8 @@
     opacity: 0;
     z-index: 1051;
     background: linear-gradient(#051036ee, #05103677);
-    pointer-events: none;
     transition: opacity .4s;
+    pointer-events: none;
     height: 100vh;
 
     &.active {
@@ -177,6 +180,9 @@
             font-size: 2em;
         }
     }
+    .active #nav-bg {
+        pointer-events: all;
+    }
 }
 
 @include media-breakpoint-down(lg) {
@@ -205,6 +211,15 @@
             top: -8em;
         }
         
+        .navbar-brand {
+            position: absolute;
+            top: 0;
+            transition: top .4s;
+        }
+        &.mobile-active .navbar-brand {
+            top: -8em;
+        }
+        
         #navbar-nav-user {
             position: absolute;
             top: -8em;
@@ -213,12 +228,28 @@
         &.mobile-active #navbar-nav-user {
             top: 1em;
         }
+        #navbar-nav-user.signed-in {
+            transform: translateX(3em);
+            border-radius: 0 99999vw 99999vw 0;
+            padding-inline: 1.5em 0.5em;
+        }
+        
+        #profile-btn {
+            position: absolute !important;
+            top: -8.5em;
+            transition: top .4s;
+            margin: 0 !important;
+        }
+        &.mobile-active #profile-btn {
+            top: 0.5em;
+        }
 
         .navbar .mobile-menu-btn {
             display: block;
             --bs-btn-active-bg: var(--bs-body-bg);
             width: 4.5em;
             height: 4.5em;
+            --bs-btn-active-border-color: transparent;
 
             > * {
                 font-size: 2.5em;
