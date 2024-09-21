@@ -190,9 +190,36 @@ $box-shadow-hover: translateY(-5px);
     font-size: 1rem;
 }
 
-.text-muted {
-    font-size: 0.9rem;
-    color: $text-muted-color;
+.home-banner {
+    min-height: 30em;
+    margin-top: -8em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    > img, .home-banner-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .home-banner-bg {
+        background: linear-gradient(#051036ee, #05103677);
+        z-index: 1;
+    }
+
+    .home-banner-content {
+        padding-block: 10em 6em;
+        z-index: 2;
+    }
+
+    .-trip-planner {
+        max-width: 1000px;
+        margin-inline: auto;
+    }
 }
 
 .tab-content {

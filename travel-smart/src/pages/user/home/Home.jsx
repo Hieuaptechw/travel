@@ -17,6 +17,7 @@ import "slick-carousel/slick/slick-theme.css";
 import bg from "../../../assets/images/bg.jpg";
 import "./Home.scss";
 import ReactStars from "react-stars";
+import TripPlanner from "../../../components/user/common/TripPlanner";
 
 const Home = () => {
   const settings = {
@@ -67,9 +68,13 @@ const Home = () => {
   console.log(hotels);
   return (
     <>
-      <section class="hero-section">
-        <img src={bg} alt="Background Image" class="hero-image" />
-     
+      <section class="home-banner">
+        <img src={bg} alt="Background Image" class="home-banner-image" />
+        <div class="home-banner-bg" />
+        <div class="home-banner-content container">
+          <h1 class="text-light text-center mb-4">Plan your next trip</h1>
+          <TripPlanner />
+        </div>
       </section>
 
       <section>
