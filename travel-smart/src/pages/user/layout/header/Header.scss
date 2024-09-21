@@ -4,6 +4,7 @@
 @import "~bootstrap/scss/mixins/breakpoints";
 
 .header-main {
+    width:100%;
     z-index: 1052;
 
     &.active {
