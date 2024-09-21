@@ -10,7 +10,7 @@ import CarList from '../../../components/user/car/CarList';
 
 const data = [...new Array(10)].map(x => (
     {
-        image: "https://placehold.co/400x400",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4dmkVmr4qwATZiDAQK2ObgIb1a8q4lvGinQ&s",
         supplier: "Noi Bai Airport",
         type: "SUV",
         model: "Mercedes-Benz E-Class",

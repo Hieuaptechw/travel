@@ -57,19 +57,19 @@ const Sidebar = () => {
                     </label>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <Link to="/admin/tour" class="dropdown-item" href="#">
                           All Tour
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <Link to="/admin/tour/add" class="dropdown-item" href="#">
                           Add Tour
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">
+                        <Link to="/admin/tour/recovey" class="dropdown-item" href="#">
                           Recovery
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -86,14 +86,14 @@ const Sidebar = () => {
                   </label>
                   <ul class="dropdown-menu">
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <Link to="/admin/car" class="dropdown-item">
                         All Car
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
+                      <Link to="/admin/car/add" class="dropdown-item">
                         Add Car
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </li>

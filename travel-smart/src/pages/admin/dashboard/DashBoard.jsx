@@ -169,33 +169,239 @@ const DashBoard = () => {
           <div className="col-lg-5 col-md-12 mb-4">
             <div className="recent-booking">
               <h2>Recent Bookings</h2>
-              <div className="table-responsive">
-            
-    
-                <table className="table">
+              <table class="custom-table">
                   <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Item</th>
+                    <tr className="custom-table-header">
+                      <th scope="col">Type</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Order Date</th>
+                      <th scope="col">Excution Time</th>
                       <th scope="col">Total</th>
                       <th scope="col">Paid</th>
+                      <th scope="col">Remain</th>
                       <th scope="col">Status</th>
-                      <th scope="col">Created</th>
+                      <th scope="col">Actions</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status cancelled">Cancelled </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
                     </tr>
-                    {/* Các dòng khác */}
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status cancelled">Cancelled </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status pending">Pending </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status complete">Complete </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status cancelled">Cancelled </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status processing">Processing </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status pending">Pending </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel</td>
+                      <td>The May Fair Hotel</td>
+                      <td>04/04/2022</td>
+                      <td>
+                        Check in : 05/14/2022
+                        <br></br>
+                        Check out :05/29/2022
+                      </td>
+                      <td>$150</td>
+                      <td>$0</td>
+                      <td>$35</td>
+                      <td>
+                        <span class="custom-status cancelled">Cancelled </span>
+                      </td>
+                      <td>
+                        <button class="custom-action-btn btn custom-view-btn">
+                          <i class="bi bi-eye-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-edit-btn">
+                          <i class="bi bi-pencil-fill"></i>
+                        </button>
+                        <button class="custom-action-btn btn custom-delete-btn">
+                          <i class="bi bi-trash-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
-              </div>
             </div>
           </div>
         </div>

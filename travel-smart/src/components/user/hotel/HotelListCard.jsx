@@ -1,6 +1,7 @@
 import React from 'react';
 import "./HotelListCard.scss";
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
+import { Link } from 'react-router-dom';
 
 const HotelListCard = ({ data }) => {
     return (
@@ -61,10 +62,12 @@ const HotelListCard = ({ data }) => {
                         </small></p>
                     </div>
                     <div className='mt-2'>
-                        <button className="btn btn-primary d-flex-center w-100 text-nowrap">
+                      <Link to="/hotels/1">
+                      <button className="btn btn-primary d-flex-center w-100 text-nowrap">
                             View availability
                             <Icon icon="radix-icons:arrow-top-right" inline class="fs-4 ms-1" />
                         </button>
+                      </Link>
                     </div>
                 </div>
             </div>

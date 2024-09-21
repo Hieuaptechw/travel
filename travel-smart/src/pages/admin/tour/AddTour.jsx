@@ -10,7 +10,7 @@ const AddTour = () => {
 
   return (
     <div className="tour-content">
-      <h1>Add Tour</h1>
+      <h3>Add Tour</h3>
       <p>Tour manager</p>
       <div className="row tab-control">
         <div className="col-12 ">
