@@ -10,7 +10,7 @@ const AddCar = () => {
 
   return (
     <div className="car-content">
-      <h1>Add Car</h1>
+      <h3>Add Car</h3>
       <p>Car manager</p>
       <div className="row tab-control">
         <div className="col-12 ">

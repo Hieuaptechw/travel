@@ -69,3 +69,30 @@
   }
 }
 
+.custom-status {
+  padding: 1px 15px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 15px;
+}
+
+.custom-status.pending {
+  background-color: #fff8dd;
+  color: #ffc700;
+
+}
+
+.custom-status.complete {
+  background-color: #e6f9e6; 
+  color: #28a745; 
+ 
+}
+.custom-status.cancelled {
+  background-color: #f8d7da; 
+  color: #dc3545;
+  
+}
+.custom-status.processing {
+  background-color: #fff3cd; 
+  color: #856404; 
+}

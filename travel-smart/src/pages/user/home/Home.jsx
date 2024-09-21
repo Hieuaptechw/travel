@@ -9,7 +9,7 @@ import Paris from "../../../assets/images/Paris.jpg";
 import icon1 from "../../../assets/images/1.svg";
 import icon2 from "../../../assets/images/2.svg";
 import icon3 from "../../../assets/images/3.svg";
-import { getHotels } from "../../../services/api";
+import { getHotels, getBlog, getTour } from "../../../services/api";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -50,7 +50,8 @@ const Home = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const cardsPerRow = 3;
   const [hotels, setHotels] = useState([]);
-
+  const [blogs, setBlogs] = useState([]);
+  const [tours, setTour] = useState([]);
   useEffect(() => {
     const fetchHotels = async () => {
       try {
@@ -63,10 +64,33 @@ const Home = () => {
         console.error("Error fetching hotels:", error);
       }
     };
+    const fetchBlogs = async () => {
+      try {
+        const response = await getBlog();
 
+        if (response && response.data) {
+          setBlogs(Object.values(response.data));
+        }
+      } catch (error) {
+        console.error("Error fetching hotels:", error);
+      }
+    };
+    const fetchTours = async () => {
+      try {
+        const response = await getTour();
+
+        if (response && response.data) {
+          setTour(Object.values(response.data));
+        }
+      } catch (error) {
+        console.error("Error fetching hotels:", error);
+      }
+    };
     fetchHotels();
+    fetchTours();
+    fetchBlogs();
   }, []);
-  console.log(hotels);
+
   return (
     <>
       <section class="home-banner">
@@ -76,6 +100,9 @@ const Home = () => {
           <h1 class="text-light text-center mb-4">Plan your next trip</h1>
           <TripPlanner />
         </div>
+      </section>
+      <section class="hero-section">
+        <img src={bg} alt="Background Image" class="hero-image" />
       </section>
 
       <section>
@@ -91,6 +118,8 @@ const Home = () => {
             </Col>
           </Row>
     
+
+          <Row>
             <Slider {...settings}>
               {Object.values(hotels).map((hotel) => (
                 <div key={hotel.id}>
@@ -98,6 +127,11 @@ const Home = () => {
                     <Card.Img
                       variant="top"
                       src={hotel.images && hotel.images.length > 0 ? hotel.images[0].image_url : 'default-image-url.jpg'}
+                      src={
+                        hotel.images && hotel.images.length > 0
+                          ? hotel.images[0].image_url
+                          : "default-image-url.jpg"
+                      }
                       className="popular-img"
                     />
                     <Card.Body>
@@ -108,8 +142,8 @@ const Home = () => {
                 </div>
               ))}
             </Slider>
+          </Row>
 
-          {/* Discount */}
           <Row className="my-5">
             <Col xs={12} lg={6}>
               <div className="custom-card item1">
@@ -179,8 +213,47 @@ const Home = () => {
               </Card>
             ))}
           </Slider>
-          <Row className="my-4 pt-5">
-            <Col xs={12} lg={4}>
+          <Row>
+          <Slider {...settings}>
+      {tours.length > 0 ? (
+        tours.map((tour, index) => (
+          <div key={index}>
+            <Card className="mb-4 hotel-card">
+              <Card.Img
+                variant="top"
+                src={tour.image}
+                className="popular-img"
+              />
+              <Card.Body>
+                <Card.Title className="hotel-title">
+                  {tour.title} 
+                </Card.Title>
+                <Card.Text className="hotel-location">
+                  {tour.location} 
+                </Card.Text>
+                <Row className="rating-row mb-2">
+                  <Col xs="auto" className="d-flex align-items-center">
+                    <Button variant="primary" className="rating-btn">{tour.rating}</Button>
+                  </Col>
+                  <Col className="d-flex flex-row align-items-center">
+                    <p className="reviews-text mb-0">{tour.reviews}</p> 
+                  </Col>
+                </Row>
+                <Card.Text className="price-text">
+                  {tour.price} 
+                </Card.Text>
+              </Card.Body>
+            </Card>
+          </div>
+        ))
+      ) : (
+        <p>Loading...</p>
+      )}
+    </Slider>
+          </Row>
+         
+          <Row>
+            <Col>
               <div className="d-flex justify-content-center">
                 <img src={icon1}></img>
               </div>
@@ -215,6 +288,7 @@ const Home = () => {
             </Col>
           </Row>
         </Container>
+      
       </section>
       <section className="top-comment my-5">
         {/* Top comment */}

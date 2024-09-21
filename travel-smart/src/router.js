@@ -30,7 +30,7 @@ import BlogSinglePage from './pages/user/blogs/blogsingle';
 import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 import ErrorPage from './pages/user/404/Error';
-import FlightPage from './pages/user/flight/flight';
+import Booking from './pages/user/setting/Booking';
 
 const routes = [
   {
@@ -146,9 +146,21 @@ const routes = [
     layout: MasterLayoutAdmin,
   },
   {
+    path: ROUTERS.USER.SETTING,
+    component: <Setting />,
+    layout: MasterLayoutAdmin,
+  },
+  {
     path: ROUTERS.USER.WISHLIST,
     component: <Wishlist />,
     layout: MasterLayoutAdmin,
+  },
+  {
+    path: ROUTERS.USER.BOOKINGHISRORY,
+    component: <Booking />,
+    layout: MasterLayoutAdmin,
+  },
+  {
     path: ROUTERS.USER.BLOG,
     component: <BlogPage />,
     layout: MasterLayout,
@@ -163,11 +175,7 @@ const routes = [
     component: <ErrorPage />,
     layout: MasterLayout,
   },
-  {
-    path: ROUTERS.USER.FLIGHT,
-    component: <FlightPage />,
-    layout: MasterLayout,
-  },
+
 
 
 ];

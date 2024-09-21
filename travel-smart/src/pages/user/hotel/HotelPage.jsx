@@ -8,7 +8,7 @@ import PageControl from '../../../components/user/common/PageControl';
 
 const data = [...new Array(10)].map(x => (
     {
-        image: "https://placehold.co/400x300",
+        image: "https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg",
         hotelName: "Great Northern Hotel, a Tribute Portfolio Hotel, London",
         hotelLocation: "Westminster Borough, London",
         hotelDistance: [2, "km", "city center"],

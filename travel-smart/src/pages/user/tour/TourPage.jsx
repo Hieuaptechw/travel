@@ -8,7 +8,7 @@ import PageControl from '../../../components/user/common/PageControl';
 
 const data = [...new Array(10)].map(x => (
     {
-        image: "https://placehold.co/400x300",
+        image: "https://img.hieuaptech.com/Tour/tour1.jpg",
         tourName: "Leeds Castle, Cliffs of Dover and Canterbury Day Trip from London with Guided Cathedral Tour",
         tourLocation: "Westminster Borough, London",
         duration: [8, "days"],

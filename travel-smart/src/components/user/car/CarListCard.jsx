@@ -1,5 +1,6 @@
 import React from 'react';
 import "./CarListCard.scss";
+import { Link } from 'react-router-dom';
 import { Icon } from '@iconify-icon/react/dist/iconify.mjs';
 
 const CarListCard = ({ data }) => {
@@ -69,10 +70,12 @@ const CarListCard = ({ data }) => {
                         </p>
                     </div>
                     <div className='mt-2'>
+                        <Link to="/cars/1">
                         <button className="btn btn-primary d-flex-center w-100 text-nowrap">
                             More details
                             <Icon icon="radix-icons:arrow-top-right" inline class="fs-4 ms-1" />
                         </button>
+                        </Link>
                     </div>
                 </div>
             </div>

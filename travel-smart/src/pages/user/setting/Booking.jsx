@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./Tour.scss";
 
-const Tour = () => {
+const Booking = () => {
   const [activeTab, setActiveTab] = useState("allBooking");
 
   const handleTabClick = (tab) => {
@@ -9,8 +8,8 @@ const Tour = () => {
   };
   return (
     <div className="hotel-content">
-      <h3>All Tour</h3>
-      <p>Tour manager</p>
+      <h3>All Booking</h3>
+      <p>Booking history</p>
       <div className="row tab-control">
         <div className="col-12 ">
           <ul className="tab-nav d-flex ">
@@ -32,12 +31,7 @@ const Tour = () => {
             >
               <a href="#">Processing</a>
             </li>
-            <li
-              className={activeTab === "confirmed" ? "active" : ""}
-              onClick={() => handleTabClick("confirmed")}
-            >
-              <a href="#">Confirmed</a>
-            </li>
+
             <li
               className={activeTab === "cancelled" ? "active" : ""}
               onClick={() => handleTabClick("cancelled")}
@@ -498,7 +492,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -525,7 +519,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -552,7 +546,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -579,7 +573,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -606,7 +600,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -633,7 +627,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -660,7 +654,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -687,7 +681,7 @@ const Tour = () => {
                       <td>$0</td>
                       <td>$35</td>
                       <td>
-                        <span class="custom-status cancelled">Cancelled </span>
+                        <span class="custom-status processing">Processing </span>
                       </td>
                       <td>
                         <button class="custom-action-btn btn custom-view-btn">
@@ -946,28 +940,10 @@ const Tour = () => {
             </div>
           )} 
         </div>
-        <div className="col-12">
-          <ul class="pagination">
-            <li class="page-item">
-              <a class="page-link" href="#">
-                1
-              </a>
-            </li>
-            <li class="page-item active">
-              <a class="page-link" href="#">
-                2
-              </a>
-            </li>
-            <li class="page-item">
-              <a class="page-link" href="#">
-                3
-              </a>
-            </li>
-          </ul>
-        </div>
+
       </div>
     </div>
   );
 };
 
-export default Tour;
+export default Booking;
