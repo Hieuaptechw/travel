@@ -101,9 +101,6 @@ const Home = () => {
           <TripPlanner />
         </div>
       </section>
-      <section class="hero-section">
-        <img src={bg} alt="Background Image" class="hero-image" />
-      </section>
 
       <section>
         <Container class="overflow-hidden px-3">
