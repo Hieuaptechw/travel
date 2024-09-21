@@ -177,40 +177,8 @@ const Home = () => {
               </select>
             </Col>
           </Row>
-          <Slider {...settings}>
-            {[...new Array(4)].map((x) => (
-              <Card className="mb-4 slider-card hotel-card">
-                <Card.Img
-                  variant="top"
-                  src={NewYorkImage}
-                  className="popular-img"
-                />
-                <Card.Body>
-                  <Card.Title className="hotel-title">
-                    The Montcalm At Brewery London City
-                  </Card.Title>
-                  <Card.Text className="hotel-location">
-                    Westminster Borough, London
-                  </Card.Text>
-                  <Row className="rating-row mb-2">
-                    <Col xs="auto" className="d-flex align-items-center">
-                      <Button variant="primary" className="rating-btn">
-                        4.7
-                      </Button>
-                    </Col>
-                    <Col className="d-flex flex-row align-items-center">
-                      <p className="rating-text mb-0">Exceptional</p>
-                      <p className="reviews-text mb-0">3014 reviews</p>
-                    </Col>
-                  </Row>
-                  <Card.Text className="price-text">
-                    Starting from <strong>US$72</strong>
-                  </Card.Text>
-                </Card.Body>
-              </Card>
-            ))}
-          </Slider>
-          <Row>
+    
+          <Row  className="mb-5">
           <Slider {...settings}>
       {tours.length > 0 ? (
         tours.map((tour, index) => (

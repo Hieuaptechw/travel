@@ -20,7 +20,7 @@ export const ROUTERS = {
         WISHLIST:"/setting/wishlist",
         BOOKINGHISRORY:"/setting/booking-history",
         ERROR: "/oops",
-        FLIGHT: "/flight"
+        FLIGHT: "/flights"
     },
     ADMIN:{
         HOME:"/admin/dashboard",

@@ -322,6 +322,21 @@ const Header = () => {
                             </ul>
                         </div>
                         <div className="col-12 col-lg-3">
+                            <h3>Checkout</h3>
+                            <ul class="navbar-nav lh-lg">
+                                <li><Link className="text-light" to="/checkout">Checkout</Link></li>
+                        
+                            </ul>
+                        </div>
+                        <div className="col-12 col-lg-3">
+                            <h3>Settings</h3>
+                            <ul class="navbar-nav lh-lg">
+                                <li><Link className="text-light" to="/setting">Setting</Link></li>
+                                <li><Link className="text-light" to="/admin/dashboard">Dashboard Admin</Link></li>
+                            </ul>
+                        </div>
+                        
+                        <div className="col-12 col-lg-3">
                             <h3>Legal</h3>
                             <ul class="navbar-nav lh-lg">
                                 <li><Link className="text-light" to="/terms">Terms of Serice</Link></li>

@@ -31,7 +31,7 @@ import CarPage from "./pages/user/car/CarPage";
 import CheckoutPage from "./pages/user/checkout/CheckoutPage";
 import ErrorPage from './pages/user/404/Error';
 import Booking from './pages/user/setting/Booking';
-import FlightPage from './pages/user/';
+import FlightPage from './pages/user/flight/flight';
 
 const routes = [
   {
