@@ -11,6 +11,7 @@ const configs = {
         "team-building": "Team building",
         "concert": "Concert",
     },
+    
     rating: {
         "any": "Any",
         "95-plus": "Exceptional (9.5+)",
